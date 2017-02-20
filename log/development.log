@@ -1355,3 +1355,285 @@ Migrating to ChangeMarkUpToDateTime (20170220105426)
   [1m[35m (14.5ms)[0m  [1m[35mALTER TABLE "jobs" ALTER COLUMN "time" TYPE timestamp[0m
   [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7381167824530102995)[0m
+Started POST "/register" for 127.0.0.1 at 2017-02-20 14:37:27 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (9.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"first_name"=>"Tom", "last_name"=>"Duckworth", "image"=>"http://fillmurray.com/304/304", "email"=>"jim@jim.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"8 Henderson Road", "postcode"=>"SW3 4NR", "dob"=>"1991-01-13", "authentication"=>{"first_name"=>"Tom", "last_name"=>"Duckworth", "image"=>"http://fillmurray.com/304/304", "email"=>"jim@jim.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"8 Henderson Road", "postcode"=>"SW3 4NR", "dob"=>"1991-01-13"}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/authentications_controller.rb:27)
+  [1m[35m (31.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (29.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jim@jim.com"], ["LIMIT", 1]]
+  [1m[35m (19.1ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (13.71ms)
+Completed 422 Unprocessable Entity in 603ms (Views: 71.6ms | ActiveRecord: 169.2ms)
+
+
+Started POST "/register" for 127.0.0.1 at 2017-02-20 14:39:22 +0000
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"first_name"=>"Tom", "last_name"=>"Duckworth", "image"=>"http://fillmurray.com/304/304", "email"=>"jim@john.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"8 Henderson Road", "postcode"=>"SW3 4NR", "dob"=>"1991-01-13", "authentication"=>{"first_name"=>"Tom", "last_name"=>"Duckworth", "image"=>"http://fillmurray.com/304/304", "email"=>"jim@john.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"8 Henderson Road", "postcode"=>"SW3 4NR", "dob"=>"1991-01-13"}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/authentications_controller.rb:27)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jim@john.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 422 Unprocessable Entity in 101ms (Views: 0.8ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/register" for 127.0.0.1 at 2017-02-20 14:40:16 +0000
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"first_name"=>"Tom", "last_name"=>"Duckworth", "image"=>"http://fillmurray.com/304/304", "email"=>"jim@chris.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"8 Henderson Road", "postcode"=>"SW3 4NR", "dob"=>"1991-01-13", "authentication"=>{"first_name"=>"Tom", "last_name"=>"Duckworth", "image"=>"http://fillmurray.com/304/304", "email"=>"jim@chris.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"8 Henderson Road", "postcode"=>"SW3 4NR", "dob"=>"1991-01-13"}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/authentications_controller.rb:27)
+  [1m[35m (3.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (17.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jim@chris.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.24ms)
+Completed 422 Unprocessable Entity in 151ms (Views: 1.8ms | ActiveRecord: 21.5ms)
+
+
+Started POST "/register" for 127.0.0.1 at 2017-02-20 14:51:37 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"first_name"=>"Tom", "last_name"=>"Duckworth", "email"=>"tom.duckworth91@gmail.com", "address"=>"Flat 54 M M2 Apartments", "postcode"=>"M4 5BS", "image"=>"http://fillmurray.com/303/303", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "dob"=>"1991-01-13", "authentication"=>{"first_name"=>"Tom", "last_name"=>"Duckworth", "email"=>"tom.duckworth91@gmail.com", "address"=>"Flat 54 M M2 Apartments", "postcode"=>"M4 5BS", "image"=>"http://fillmurray.com/303/303", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "dob"=>"1991-01-13"}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/authentications_controller.rb:27)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (15.97ms)
+Completed 422 Unprocessable Entity in 360ms (Views: 36.0ms | ActiveRecord: 12.4ms)
+
+
+Started POST "/register" for 127.0.0.1 at 2017-02-20 15:09:39 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (7.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"first_name"=>"Tom", "last_name"=>"Duckworth", "email"=>"tom.duckworth91@gmail.com", "address"=>"Flat 54 M M2 Apartments", "postcode"=>"M4 5BS", "image"=>"http://fillmurray.com/303/303", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "dob"=>"1991-01-13", "authentication"=>{"first_name"=>"Tom", "last_name"=>"Duckworth", "email"=>"tom.duckworth91@gmail.com", "address"=>"Flat 54 M M2 Apartments", "postcode"=>"M4 5BS", "image"=>"http://fillmurray.com/303/303", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "dob"=>"1991-01-13"}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/authentications_controller.rb:27)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (34.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tom.duckworth91@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 422 Unprocessable Entity in 435ms (Views: 19.9ms | ActiveRecord: 61.4ms)
+
+
+Started POST "/register" for 127.0.0.1 at 2017-02-20 15:09:42 +0000
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"first_name"=>"Tom", "last_name"=>"Duckworth", "email"=>"tom.duckworth91@gmail.com", "address"=>"Flat 54 M M2 Apartments", "postcode"=>"M4 5BS", "image"=>"http://fillmurray.com/303/303", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "dob"=>"1991-01-13", "authentication"=>{"first_name"=>"Tom", "last_name"=>"Duckworth", "email"=>"tom.duckworth91@gmail.com", "address"=>"Flat 54 M M2 Apartments", "postcode"=>"M4 5BS", "image"=>"http://fillmurray.com/303/303", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "dob"=>"1991-01-13"}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/authentications_controller.rb:27)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tom.duckworth91@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 422 Unprocessable Entity in 309ms (Views: 0.9ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/register" for 127.0.0.1 at 2017-02-20 15:11:43 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"first_name"=>"Tom", "last_name"=>"Duckworth", "email"=>"tom.duckworth91@gmail.com", "address"=>"Flat 54 M M2 Apartments", "postcode"=>"M4 5BS", "image"=>"http://fillmurray.com/303/303", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "dob"=>"1991-01-13", "authentication"=>{"first_name"=>"Tom", "last_name"=>"Duckworth", "email"=>"tom.duckworth91@gmail.com", "address"=>"Flat 54 M M2 Apartments", "postcode"=>"M4 5BS", "image"=>"http://fillmurray.com/303/303", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "dob"=>"1991-01-13"}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/authentications_controller.rb:27)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tom.duckworth91@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 422 Unprocessable Entity in 284ms (Views: 13.8ms | ActiveRecord: 27.2ms)
+
+
+Started POST "/register" for 127.0.0.1 at 2017-02-20 15:11:56 +0000
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"first_name"=>"Tom", "last_name"=>"Duckworth", "email"=>"tom.duckworth93@gmail.com", "address"=>"Flat 54 M M2 Apartments", "postcode"=>"M4 5BS", "image"=>"http://fillmurray.com/303/303", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "dob"=>"1991-01-13", "authentication"=>{"first_name"=>"Tom", "last_name"=>"Duckworth", "email"=>"tom.duckworth93@gmail.com", "address"=>"Flat 54 M M2 Apartments", "postcode"=>"M4 5BS", "image"=>"http://fillmurray.com/303/303", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "dob"=>"1991-01-13"}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/authentications_controller.rb:27)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tom.duckworth93@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 422 Unprocessable Entity in 209ms (Views: 1.2ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/register" for 127.0.0.1 at 2017-02-20 15:16:27 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"first_name"=>"Tom", "last_name"=>"Duckworth", "image"=>"http://fillmurray.com/304/304", "email"=>"tim@tim.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"7 Henderson Road, London", "postcode"=>"SW18 3RR", "dob"=>"1991-01-13", "authentication"=>{"first_name"=>"Tom", "last_name"=>"Duckworth", "image"=>"http://fillmurray.com/304/304", "email"=>"tim@tim.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"7 Henderson Road, London", "postcode"=>"SW18 3RR", "dob"=>"1991-01-13"}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/authentications_controller.rb:27)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tim@tim.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.26ms)
+Completed 422 Unprocessable Entity in 297ms (Views: 19.8ms | ActiveRecord: 12.7ms)
+
+
+Started POST "/register" for 127.0.0.1 at 2017-02-20 15:16:48 +0000
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"first_name"=>"Tom", "last_name"=>"Duckworth", "image"=>"http://fillmurray.com/304/304", "email"=>"jeff@george.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"7 Henderson Road, London", "postcode"=>"SW18 3RR", "dob"=>"1991-01-13", "authentication"=>{"first_name"=>"Tom", "last_name"=>"Duckworth", "image"=>"http://fillmurray.com/304/304", "email"=>"jeff@george.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"7 Henderson Road, London", "postcode"=>"SW18 3RR", "dob"=>"1991-01-13"}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/authentications_controller.rb:27)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jeff@george.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 422 Unprocessable Entity in 100ms (Views: 0.7ms | ActiveRecord: 2.6ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mJob Load (26.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from <top (required)> at /Users/Tom/development/WDI_Project_4-api/db/seeds.rb:2)
+  [1m[36mRequest Load (2.4ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tom.duckworth91@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (153.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "first_name", "last_name", "mobile", "postcode", "image", "address", "dob") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["email", "tom.duckworth91@gmail.com"], ["password_digest", "$2a$10$nBxHw09bW.1BXFRYy7fQ3OlbRtuDMaCf3W5WWJW9JQNyDsrVSxyEy"], ["created_at", 2017-02-20 15:19:34 UTC], ["updated_at", 2017-02-20 15:19:34 UTC], ["first_name", "Tom"], ["last_name", "Duckworth"], ["mobile", "07960191449"], ["postcode", "SW18 3RR"], ["image", "http://fillmurray.com/209/304"], ["address", "7 Henderson Road"], ["dob", Sun, 13 Jan 1991]]
+  [1m[35m (28.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (89.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from <top (required)> at /Users/Tom/development/WDI_Project_4-api/db/seeds.rb:2)
+  [1m[36mRequest Load (0.5ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tom.duckworth91@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "first_name", "last_name", "mobile", "postcode", "image", "address", "dob") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["email", "tom.duckworth91@gmail.com"], ["password_digest", "$2a$10$Q/qQhAwFKP0OCMqLTyRGxu5ZZ7bahfh4rjOXYznUoxaoLZVN2lfwS"], ["created_at", 2017-02-20 15:20:12 UTC], ["updated_at", 2017-02-20 15:20:12 UTC], ["first_name", "Tom"], ["last_name", "Duckworth"], ["mobile", "07960191449"], ["postcode", "SW18 3RR"], ["image", "http://fillmurray.com/209/304"], ["address", "7 Henderson Road"], ["dob", Sun, 13 Jan 1991]]
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (27.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from <top (required)> at /Users/Tom/development/WDI_Project_4-api/db/seeds.rb:2)
+  [1m[36mRequest Load (0.5ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tom.duckworth91@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (35.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "first_name", "last_name", "mobile", "postcode", "image", "address", "dob") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["email", "tom.duckworth91@gmail.com"], ["password_digest", "$2a$10$5ABSt9I6PU5eQSIk7Gt5oO6TMMRPV9NhvDw6YKiMPiGQG.M2z59Dm"], ["created_at", 2017-02-20 15:21:49 UTC], ["updated_at", 2017-02-20 15:21:49 UTC], ["first_name", "Tom"], ["last_name", "Duckworth"], ["mobile", "07960191449"], ["postcode", "SW18 3RR"], ["image", "http://fillmurray.com/209/304"], ["address", "7 Henderson Road"], ["dob", Sun, 13 Jan 1991]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (16.1ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "description", "location", "postcode", "time", "date", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Cleaner"], ["description", "Clean me please."], ["location", "8 Guilford Cresent"], ["postcode", "E5 6HY"], ["time", 2000-01-01 08:00:00 UTC], ["date", Sun, 14 May 2017], ["owner_id", 3], ["created_at", 2017-02-20 15:21:49 UTC], ["updated_at", 2017-02-20 15:21:49 UTC]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (21.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "phil.daniels@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "first_name", "last_name", "mobile", "postcode", "image", "address", "dob") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["email", "phil.daniels@gmail.com"], ["password_digest", "$2a$10$14cuP8peaMuKv.aGfE2sYuzaobD3sTKlVfVPAmbdk1qNY0SJZ8llK"], ["created_at", 2017-02-20 15:21:49 UTC], ["updated_at", 2017-02-20 15:21:49 UTC], ["first_name", "Phil"], ["last_name", "Daniels"], ["mobile", "07960191459"], ["postcode", "W1 6QU"], ["image", "http://fillmurray.com/300/304"], ["address", "9 Wallaby Way"], ["dob", Mon, 20 Jul 1981]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "josh@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "first_name", "last_name", "mobile", "postcode", "image", "address", "dob") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["email", "josh@gmail.com"], ["password_digest", "$2a$10$NJ2XaS5kHJ7ym/s/NzRv7OzlQ827WT7bDumjV38EWnn.SeYlZB.ui"], ["created_at", 2017-02-20 15:21:49 UTC], ["updated_at", 2017-02-20 15:21:49 UTC], ["first_name", "Josh"], ["last_name", "Gregson"], ["mobile", "07960143459"], ["postcode", "NW2 4AL"], ["image", "http://fillmurray.com/310/320"], ["address", "9 Sydney Street"], ["dob", Thu, 21 Apr 1983]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  [1m[35m (27.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from <top (required)> at /Users/Tom/development/WDI_Project_4-api/db/seeds.rb:2)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRequest Load (0.5ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tom.duckworth91@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (36.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "first_name", "last_name", "mobile", "postcode", "image", "address", "dob") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["email", "tom.duckworth91@gmail.com"], ["password_digest", "$2a$10$FNVGX5wdH.b1.Rr2C19yAeYWrDFSl0ntyMcg/tfUHQCVXN.Y5P2Vu"], ["created_at", 2017-02-20 15:22:38 UTC], ["updated_at", 2017-02-20 15:22:38 UTC], ["first_name", "Tom"], ["last_name", "Duckworth"], ["mobile", "07960191449"], ["postcode", "SW18 3RR"], ["image", "http://fillmurray.com/209/304"], ["address", "7 Henderson Road"], ["dob", Sun, 13 Jan 1991]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "description", "location", "postcode", "time", "date", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Cleaner"], ["description", "Clean me please."], ["location", "8 Guilford Cresent"], ["postcode", "E5 6HY"], ["time", 2000-01-01 08:00:00 UTC], ["date", Sun, 14 May 2017], ["owner_id", 6], ["created_at", 2017-02-20 15:22:38 UTC], ["updated_at", 2017-02-20 15:22:38 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "phil.daniels@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "first_name", "last_name", "mobile", "postcode", "image", "address", "dob") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["email", "phil.daniels@gmail.com"], ["password_digest", "$2a$10$x64zcRogfbz9AjU7jUkgyui1Obdoa6n8VdEEYG6OzHA1ttsdeUAa2"], ["created_at", 2017-02-20 15:22:38 UTC], ["updated_at", 2017-02-20 15:22:38 UTC], ["first_name", "Phil"], ["last_name", "Daniels"], ["mobile", "07960191459"], ["postcode", "W1 6QU"], ["image", "http://fillmurray.com/300/304"], ["address", "9 Wallaby Way"], ["dob", Mon, 20 Jul 1981]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "josh@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "first_name", "last_name", "mobile", "postcode", "image", "address", "dob") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["email", "josh@gmail.com"], ["password_digest", "$2a$10$/a/RPHotXz8SgAro2COYSeDSJ9gd7Qowftqgsstm8jW0o4LNt/B5K"], ["created_at", 2017-02-20 15:22:39 UTC], ["updated_at", 2017-02-20 15:22:39 UTC], ["first_name", "Josh"], ["last_name", "Gregson"], ["mobile", "07960143459"], ["postcode", "NW2 4AL"], ["image", "http://fillmurray.com/310/320"], ["address", "9 Sydney Street"], ["dob", Thu, 21 Apr 1983]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (12.4ms)[0m  [1m[32mINSERT INTO "requests" ("message", "job_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "I'm up for it"], ["job_id", 2], ["user_id", 7], ["created_at", 2017-02-20 15:22:39 UTC], ["updated_at", 2017-02-20 15:22:39 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (11.3ms)[0m  [1m[32mINSERT INTO "requests" ("message", "job_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "I am well up for this"], ["job_id", 2], ["user_id", 8], ["created_at", 2017-02-20 15:22:39 UTC], ["updated_at", 2017-02-20 15:22:39 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/register" for 127.0.0.1 at 2017-02-20 15:23:13 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"first_name"=>"Tom", "last_name"=>"Duckworth", "image"=>"http://fillmurray.com/304/304", "email"=>"jeff@george.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"7 Henderson Road, London", "postcode"=>"SW18 3RR", "dob"=>"1991-01-13", "authentication"=>{"first_name"=>"Tom", "last_name"=>"Duckworth", "image"=>"http://fillmurray.com/304/304", "email"=>"jeff@george.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"7 Henderson Road, London", "postcode"=>"SW18 3RR", "dob"=>"1991-01-13"}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/authentications_controller.rb:27)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jeff@george.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "first_name", "last_name", "postcode", "image", "address", "dob") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "jeff@george.com"], ["password_digest", "$2a$10$S.JAaH6c.wN/5vfjCF3LW.qFM1.nUMMRxnjJp11LexNdNOLPkIARO"], ["created_at", 2017-02-20 15:23:14 UTC], ["updated_at", 2017-02-20 15:23:14 UTC], ["first_name", "Tom"], ["last_name", "Duckworth"], ["postcode", "SW18 3RR"], ["image", "http://fillmurray.com/304/304"], ["address", "7 Henderson Road, London"], ["dob", Sun, 13 Jan 1991]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (32.56ms)
+Completed 200 OK in 354ms (Views: 40.0ms | ActiveRecord: 29.9ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-02-20 15:24:21 +0000
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"jeff@george.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"jeff@george.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jeff@george.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 401 Unauthorized in 179ms (Views: 1.0ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-02-20 15:24:27 +0000
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"jeff@george.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"jeff@george.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (11.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jeff@george.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.51ms)
+Completed 200 OK in 133ms (Views: 2.1ms | ActiveRecord: 11.5ms)
+
+
