@@ -4,7 +4,7 @@ Request.destroy_all
 
 user1 = User.create!(email: "tom.duckworth91@gmail.com", password: "password", password_confirmation: "password", first_name: "Tom", last_name: "Duckworth", mobile: "07960191449", address: "7 Henderson Road", postcode: "SW18 3RR", image: "http://fillmurray.com/209/304", dob: "1991-01-13")
 
-job1 = Job.create!(title: "Cleaner", description: "Clean me please.", location: "8 Guilford Cresent", postcode: "E5 6HY", time: "08:00:00", date: "2017-05-14", owner_id: user1.id)
+job1 = Job.create!(title: "Cleaner", description: "Clean me please.", location: "8 Guilford Cresent", postcode: "E5 6HY", time: "2000-01-01 08:00:00", date: "2017-05-14", owner_id: user1.id)
 
 user2 = User.create!(email: "phil.daniels@gmail.com", password: "password", password_confirmation: "password", first_name: "Phil", last_name: "Daniels", mobile: "07960191459", address: "9 Wallaby Way", postcode: "W1 6QU", image: "http://fillmurray.com/300/304", dob: "1981-07-20")
 

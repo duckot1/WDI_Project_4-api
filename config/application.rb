@@ -28,5 +28,9 @@ module WdiProject4Api
     config.api_only = true
 
     config.eager_load_paths << Rails.root.join('lib')
+
+    config.time_zone = 'London'
+    config.active_record.default_timezone = :local
+
   end
 end
