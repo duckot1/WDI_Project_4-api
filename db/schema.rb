@@ -10,16 +10,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170216121231) do
+ActiveRecord::Schema.define(version: 20170220015109) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "jobs", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "location"
+    t.string   "postcode"
+    t.time     "time"
+    t.date     "date"
+    t.integer  "owner_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "requests", force: :cascade do |t|
+    t.text     "message"
+    t.integer  "job_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["job_id"], name: "index_requests_on_job_id", using: :btree
+    t.index ["user_id"], name: "index_requests_on_user_id", using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "mobile"
+    t.string   "postcode"
+    t.string   "image"
+    t.string   "address"
+    t.date     "dob"
   end
 
+  add_foreign_key "requests", "jobs"
+  add_foreign_key "requests", "users"
 end
