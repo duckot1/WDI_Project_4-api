@@ -1637,3 +1637,24 @@ Processing by AuthenticationsController#login as HTML
 Completed 200 OK in 133ms (Views: 2.1ms | ActiveRecord: 11.5ms)
 
 
+Started POST "/login" for 127.0.0.1 at 2017-02-20 15:34:22 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"jeff@george.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"jeff@george.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jeff@george.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (32.5ms)
+Completed 200 OK in 267ms (Views: 39.9ms | ActiveRecord: 12.8ms)
+
+
+Started POST "/register" for 127.0.0.1 at 2017-02-20 22:50:57 +0000
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"first_name"=>"Jeff", "last_name"=>"Jeffreys", "image"=>"http://fillmurray.com/303/303", "email"=>"jeb@jeb.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"8 Henderson Road", "postcode"=>"SW18 3RR", "dob"=>"1991-01-13", "authentication"=>{"first_name"=>"Jeff", "last_name"=>"Jeffreys", "image"=>"http://fillmurray.com/303/303", "email"=>"jeb@jeb.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"8 Henderson Road", "postcode"=>"SW18 3RR", "dob"=>"1991-01-13"}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/authentications_controller.rb:27)
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (42.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jeb@jeb.com"], ["LIMIT", 1]]
+  [1m[35mSQL (132.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "first_name", "last_name", "postcode", "image", "address", "dob") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "jeb@jeb.com"], ["password_digest", "$2a$10$CxkJ/h4MnZiixbtDUaJE0uBSjFmHeljgBGOefncLm8KR15wschNRy"], ["created_at", 2017-02-20 22:50:58 UTC], ["updated_at", 2017-02-20 22:50:58 UTC], ["first_name", "Jeff"], ["last_name", "Jeffreys"], ["postcode", "SW18 3RR"], ["image", "http://fillmurray.com/303/303"], ["address", "8 Henderson Road"], ["dob", Sun, 13 Jan 1991]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.84ms)
+Completed 200 OK in 785ms (Views: 3.8ms | ActiveRecord: 183.4ms)
+
+
