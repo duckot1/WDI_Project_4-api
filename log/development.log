@@ -2337,3 +2337,830 @@ Processing by JobsController#show as HTML
 Completed 200 OK in 8ms (Views: 2.9ms | ActiveRecord: 1.6ms)
 
 
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 14:19:11 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (47.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (16.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (37.54ms)
+Completed 200 OK in 132ms (Views: 48.7ms | ActiveRecord: 63.6ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 14:20:39 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (340.55ms)
+Completed 200 OK in 446ms (Views: 347.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 14:22:06 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (43.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (58.98ms)
+Completed 200 OK in 146ms (Views: 73.2ms | ActiveRecord: 44.2ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 14:24:12 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (17.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (6.2ms)
+Completed 200 OK in 54ms (Views: 13.7ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 14:26:51 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (39.85ms)
+Completed 200 OK in 83ms (Views: 45.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 14:27:07 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (1.14ms)
+Completed 200 OK in 32ms (Views: 2.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 14:27:12 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (16.97ms)
+Completed 200 OK in 43ms (Views: 35.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 14:28:49 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (15.84ms)
+Completed 200 OK in 93ms (Views: 39.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 14:53:58 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (30.82ms)
+Completed 200 OK in 72ms (Views: 36.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 14:54:19 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (13.33ms)
+Completed 200 OK in 73ms (Views: 46.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2017-02-21 14:54:26 +0000
+Processing by JobsController#create as HTML
+  Parameters: {"id"=>3, "title"=>"Hanndy man2", "description"=>"I need a handy man", "location"=>"My house", "postcode"=>"SW18 3RR", "time"=>"2000-01-01T08:00:00.000Z", "date"=>nil, "owner_id"=>9, "created_at"=>"2017-02-21T13:46:16.992Z", "updated_at"=>"2017-02-21T13:46:16.992Z", "tasker_id"=>nil, "job"=>{"id"=>3, "title"=>"Hanndy man2", "description"=>"I need a handy man", "location"=>"My house", "postcode"=>"SW18 3RR", "time"=>"2000-01-01T08:00:00.000Z", "date"=>nil, "owner_id"=>9, "created_at"=>"2017-02-21T13:46:16.992Z", "updated_at"=>"2017-02-21T13:46:16.992Z", "tasker_id"=>nil}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/jobs_controller.rb:51)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (76.0ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "description", "location", "postcode", "time", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Hanndy man2"], ["description", "I need a handy man"], ["location", "My house"], ["postcode", "SW18 3RR"], ["time", 2000-01-01 08:00:00 UTC], ["owner_id", 9], ["created_at", 2017-02-21 14:54:26 UTC], ["updated_at", 2017-02-21 14:54:26 UTC]]
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (1.04ms)
+Completed 201 Created in 540ms (Views: 22.4ms | ActiveRecord: 84.5ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 14:54:40 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (1.45ms)
+Completed 200 OK in 38ms (Views: 2.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2017-02-21 14:54:44 +0000
+Processing by JobsController#create as HTML
+  Parameters: {"id"=>3, "title"=>"Hanndy man2", "description"=>"I need a handy man", "location"=>"My house", "postcode"=>"SW18 3RR", "time"=>"2000-01-01T08:00:00.000Z", "date"=>nil, "owner_id"=>9, "created_at"=>"2017-02-21T13:46:16.992Z", "updated_at"=>"2017-02-21T13:46:16.992Z", "tasker_id"=>nil, "job"=>{"id"=>3, "title"=>"Hanndy man2", "description"=>"I need a handy man", "location"=>"My house", "postcode"=>"SW18 3RR", "time"=>"2000-01-01T08:00:00.000Z", "date"=>nil, "owner_id"=>9, "created_at"=>"2017-02-21T13:46:16.992Z", "updated_at"=>"2017-02-21T13:46:16.992Z", "tasker_id"=>nil}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/jobs_controller.rb:51)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (17.1ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "description", "location", "postcode", "time", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Hanndy man2"], ["description", "I need a handy man"], ["location", "My house"], ["postcode", "SW18 3RR"], ["time", 2000-01-01 08:00:00 UTC], ["owner_id", 9], ["created_at", 2017-02-21 14:54:44 UTC], ["updated_at", 2017-02-21 14:54:44 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (0.64ms)
+Completed 201 Created in 56ms (Views: 2.6ms | ActiveRecord: 20.1ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 14:55:41 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (1.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (18.97ms)
+Completed 200 OK in 116ms (Views: 23.9ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2017-02-21 14:55:44 +0000
+Processing by JobsController#create as HTML
+  Parameters: {"id"=>3, "title"=>"Hanndy man", "description"=>"I need a handy man", "location"=>"My house", "postcode"=>"SW18 3RR", "time"=>"2000-01-01T08:00:00.000Z", "date"=>nil, "owner_id"=>9, "created_at"=>"2017-02-21T13:46:16.992Z", "updated_at"=>"2017-02-21T13:46:16.992Z", "tasker_id"=>nil, "job"=>{"id"=>3, "title"=>"Hanndy man", "description"=>"I need a handy man", "location"=>"My house", "postcode"=>"SW18 3RR", "time"=>"2000-01-01T08:00:00.000Z", "date"=>nil, "owner_id"=>9, "created_at"=>"2017-02-21T13:46:16.992Z", "updated_at"=>"2017-02-21T13:46:16.992Z", "tasker_id"=>nil}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/jobs_controller.rb:51)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (15.4ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "description", "location", "postcode", "time", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Hanndy man"], ["description", "I need a handy man"], ["location", "My house"], ["postcode", "SW18 3RR"], ["time", 2000-01-01 08:00:00 UTC], ["owner_id", 9], ["created_at", 2017-02-21 14:55:44 UTC], ["updated_at", 2017-02-21 14:55:44 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (0.97ms)
+Completed 201 Created in 227ms (Views: 18.0ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 14:57:51 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (5.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (34.73ms)
+Completed 200 OK in 97ms (Views: 39.5ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 14:59:08 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (95.63ms)
+Completed 200 OK in 313ms (Views: 226.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 14:59:49 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (9.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (1.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (66.29ms)
+Completed 200 OK in 246ms (Views: 71.0ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 14:59:58 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (1.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (44.42ms)
+Completed 200 OK in 71ms (Views: 45.6ms | ActiveRecord: 3.0ms)
+
+
+Started PUT "/jobs" for 127.0.0.1 at 2017-02-21 15:00:09 +0000
+  
+ActionController::RoutingError (No route matches [PUT] "/jobs"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.1) lib/rack/cors.rb:81:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 15:00:46 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (19.9ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (33.11ms)
+Completed 200 OK in 719ms (Views: 38.6ms | ActiveRecord: 21.0ms)
+
+
+Started PUT "/jobs/3" for 127.0.0.1 at 2017-02-21 15:00:51 +0000
+Processing by JobsController#update as HTML
+  Parameters: {"id"=>"3", "title"=>"Hanndy man2", "description"=>"I need a handy man", "location"=>"My house", "postcode"=>"SW18 3RR", "time"=>"2000-01-01T08:00:00.000Z", "date"=>nil, "owner_id"=>9, "created_at"=>"2017-02-21T13:46:16.992Z", "updated_at"=>"2017-02-21T13:46:16.992Z", "tasker_id"=>nil, "job"=>{"id"=>"3", "title"=>"Hanndy man2", "description"=>"I need a handy man", "location"=>"My house", "postcode"=>"SW18 3RR", "time"=>"2000-01-01T08:00:00.000Z", "date"=>nil, "owner_id"=>9, "created_at"=>"2017-02-21T13:46:16.992Z", "updated_at"=>"2017-02-21T13:46:16.992Z", "tasker_id"=>nil}}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/jobs_controller.rb:51)
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (185.8ms)[0m  [1m[33mUPDATE "jobs" SET "title" = $1, "updated_at" = $2 WHERE "jobs"."id" = $3[0m  [["title", "Hanndy man2"], ["updated_at", 2017-02-21 15:00:51 UTC], ["id", 3]]
+  [1m[35m (18.3ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (1.13ms)
+Completed 200 OK in 459ms (Views: 2.2ms | ActiveRecord: 214.4ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 15:01:06 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (54.07ms)
+Completed 200 OK in 158ms (Views: 96.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 15:01:18 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (1.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (56.03ms)
+Completed 200 OK in 254ms (Views: 158.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 15:01:25 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (0.81ms)
+Completed 200 OK in 7ms (Views: 1.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 15:03:52 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (1.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (2.19ms)
+Completed 200 OK in 16ms (Views: 5.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 15:03:58 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (0.84ms)
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 15:04:11 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (82.51ms)
+Completed 200 OK in 141ms (Views: 83.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 15:05:03 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (92.65ms)
+Completed 200 OK in 241ms (Views: 138.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 15:06:03 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (11.93ms)
+Completed 200 OK in 196ms (Views: 20.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 15:06:59 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (22.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (11.25ms)
+Completed 200 OK in 87ms (Views: 20.3ms | ActiveRecord: 22.6ms)
+
+
+Started DELETE "/jobs/3" for 127.0.0.1 at 2017-02-21 15:07:01 +0000
+Processing by JobsController#destroy as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+Started GET "/jobs" for 127.0.0.1 at 2017-02-21 15:07:02 +0000
+  [1m[35mSQL (981.6ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 3]]
+  [1m[35m (13.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 1586ms (ActiveRecord: 997.2ms)
+
+
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (1.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+No serializer found for resource: #<Job id: 2, title: "Cleaner", description: "Clean me please.", location: "8 Guilford Cresent", postcode: "E5 6HY", time: "2000-01-01 08:00:00", date: "2017-05-14", owner_id: 6, created_at: "2017-02-20 15:22:38", updated_at: "2017-02-20 15:22:38", tasker_id: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Job::ActiveRecord_Relation (3.84ms)
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/jobs/4" for 127.0.0.1 at 2017-02-21 15:07:09 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (2.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (1.02ms)
+Completed 200 OK in 8ms (Views: 2.1ms | ActiveRecord: 3.0ms)
+
+
+Started DELETE "/jobs/4" for 127.0.0.1 at 2017-02-21 15:07:10 +0000
+Processing by JobsController#destroy as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (11.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (8.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+Started GET "/jobs" for 127.0.0.1 at 2017-02-21 15:07:10 +0000
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+No serializer found for resource: #<Job id: 2, title: "Cleaner", description: "Clean me please.", location: "8 Guilford Cresent", postcode: "E5 6HY", time: "2000-01-01 08:00:00", date: "2017-05-14", owner_id: 6, created_at: "2017-02-20 15:22:38", updated_at: "2017-02-20 15:22:38", tasker_id: nil>
+  [1m[35mSQL (88.2ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Job::ActiveRecord_Relation (71.71ms)
+Completed 200 OK in 138ms (Views: 134.7ms | ActiveRecord: 1.1ms)
+
+
+  [1m[35m (48.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 280ms (ActiveRecord: 170.5ms)
+
+
+Started GET "/jobs/5" for 127.0.0.1 at 2017-02-21 15:07:12 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (1.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (1.57ms)
+Completed 200 OK in 8ms (Views: 3.5ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/jobs/5" for 127.0.0.1 at 2017-02-21 15:07:13 +0000
+Processing by JobsController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (1.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 5]]
+  [1m[35m (32.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 47ms (ActiveRecord: 39.7ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-02-21 15:07:13 +0000
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+No serializer found for resource: #<Job id: 2, title: "Cleaner", description: "Clean me please.", location: "8 Guilford Cresent", postcode: "E5 6HY", time: "2000-01-01 08:00:00", date: "2017-05-14", owner_id: 6, created_at: "2017-02-20 15:22:38", updated_at: "2017-02-20 15:22:38", tasker_id: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Job::ActiveRecord_Relation (1.92ms)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-02-21 15:07:52 +0000
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+No serializer found for resource: #<Job id: 2, title: "Cleaner", description: "Clean me please.", location: "8 Guilford Cresent", postcode: "E5 6HY", time: "2000-01-01 08:00:00", date: "2017-05-14", owner_id: 6, created_at: "2017-02-20 15:22:38", updated_at: "2017-02-20 15:22:38", tasker_id: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Job::ActiveRecord_Relation (27.84ms)
+Completed 200 OK in 102ms (Views: 58.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/jobs/6" for 127.0.0.1 at 2017-02-21 15:07:55 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (1.11ms)
+Completed 200 OK in 14ms (Views: 6.8ms | ActiveRecord: 2.3ms)
+
+
+Started DELETE "/jobs/6" for 127.0.0.1 at 2017-02-21 15:07:56 +0000
+Processing by JobsController#destroy as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 6]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 17ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-02-21 15:07:56 +0000
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (2.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+No serializer found for resource: #<Job id: 2, title: "Cleaner", description: "Clean me please.", location: "8 Guilford Cresent", postcode: "E5 6HY", time: "2000-01-01 08:00:00", date: "2017-05-14", owner_id: 6, created_at: "2017-02-20 15:22:38", updated_at: "2017-02-20 15:22:38", tasker_id: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Job::ActiveRecord_Relation (0.89ms)
+Completed 200 OK in 26ms (Views: 19.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2017-02-21 15:13:40 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (7.71ms)
+Completed 200 OK in 90ms (Views: 14.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2017-02-21 15:23:56 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (32.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (19.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (44.26ms)
+Completed 200 OK in 302ms (Views: 49.0ms | ActiveRecord: 51.2ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2017-02-21 15:24:09 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (1.38ms)
+Completed 200 OK in 65ms (Views: 2.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2017-02-21 15:24:30 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (17.37ms)
+Completed 200 OK in 39ms (Views: 25.6ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2017-02-21 15:25:04 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (24.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (6.83ms)
+Completed 200 OK in 118ms (Views: 70.5ms | ActiveRecord: 25.4ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2017-02-21 15:25:31 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (1.9ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (23.45ms)
+Completed 200 OK in 37ms (Views: 24.4ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2017-02-21 15:25:47 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (30.99ms)
+Completed 200 OK in 86ms (Views: 36.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2017-02-21 15:36:23 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (1.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (6.13ms)
+Completed 200 OK in 89ms (Views: 49.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2017-02-21 15:36:54 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (37.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (35.03ms)
+Completed 200 OK in 268ms (Views: 52.0ms | ActiveRecord: 38.7ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2017-02-21 15:37:19 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (19.1ms)
+Completed 200 OK in 40ms (Views: 20.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2017-02-21 15:38:29 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (95.84ms)
+Completed 200 OK in 293ms (Views: 138.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2017-02-21 15:38:46 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (1.57ms)
+Completed 200 OK in 146ms (Views: 21.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-02-21 15:38:49 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (77.25ms)
+Completed 200 OK in 230ms (Views: 222.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-02-21 15:39:59 +0000
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"jeff@george.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"jeff@george.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (148.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jeff@george.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.85ms)
+Completed 200 OK in 770ms (Views: 78.8ms | ActiveRecord: 150.5ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 15:40:00 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (13.78ms)
+Completed 200 OK in 63ms (Views: 14.9ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-02-21 15:40:00 +0000
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+No serializer found for resource: #<Job id: 2, title: "Cleaner", description: "Clean me please.", location: "8 Guilford Cresent", postcode: "E5 6HY", time: "2000-01-01 08:00:00", date: "2017-05-14", owner_id: 6, created_at: "2017-02-20 15:22:38", updated_at: "2017-02-20 15:22:38", tasker_id: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Job::ActiveRecord_Relation (17.88ms)
+Completed 200 OK in 28ms (Views: 23.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 15:40:03 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.75ms)
+Completed 200 OK in 48ms (Views: 3.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 15:41:46 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (8.95ms)
+Completed 200 OK in 53ms (Views: 16.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 15:42:36 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (105.53ms)
+Completed 200 OK in 202ms (Views: 116.8ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 15:46:59 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (13.6ms)
+Completed 200 OK in 50ms (Views: 18.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 15:47:15 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (9.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.54ms)
+Completed 200 OK in 17ms (Views: 1.6ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 15:48:41 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (8.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.72ms)
+Completed 200 OK in 111ms (Views: 24.2ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 15:49:00 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (34.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (15.08ms)
+Completed 200 OK in 71ms (Views: 15.8ms | ActiveRecord: 35.7ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 16:05:27 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (40.95ms)
+Completed 200 OK in 83ms (Views: 46.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 16:05:36 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.04ms)
+Completed 200 OK in 10ms (Views: 3.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 16:05:38 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.84ms)
+Completed 200 OK in 36ms (Views: 2.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 16:06:43 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (15.21ms)
+Completed 200 OK in 61ms (Views: 34.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 16:06:46 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.99ms)
+Completed 200 OK in 7ms (Views: 2.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 16:07:20 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (134.42ms)
+Completed 200 OK in 295ms (Views: 139.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 16:07:28 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.72ms)
+Completed 200 OK in 19ms (Views: 4.0ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 16:07:48 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (9.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (26.85ms)
+Completed 200 OK in 87ms (Views: 28.2ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 16:07:56 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (41.16ms)
+Completed 200 OK in 81ms (Views: 51.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 16:07:58 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.59ms)
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 16:08:42 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (37.0ms)
+Completed 200 OK in 74ms (Views: 48.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 16:08:46 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (16.48ms)
+Completed 200 OK in 31ms (Views: 18.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 16:08:48 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.97ms)
+Completed 200 OK in 56ms (Views: 13.1ms | ActiveRecord: 3.7ms)
+
+
+Started PUT "/jobs/9" for 127.0.0.1 at 2017-02-21 16:08:51 +0000
+Processing by JobsController#update as HTML
+  Parameters: {"id"=>"9", "first_name"=>"Tommy", "last_name"=>"Duckworth", "address"=>"7 Henderson Road, London", "postcode"=>"SW18 3RR", "dob"=>"1991-01-13", "email"=>"jeff@george.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>"http://fillmurray.com/304/304", "job"=>{"id"=>"9", "postcode"=>"SW18 3RR"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+Completed 404 Not Found in 45ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Job with 'id'=9):
+  
+app/controllers/jobs_controller.rb:45:in `set_job'
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 16:09:12 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.16ms)
+Completed 200 OK in 41ms (Views: 8.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 16:09:17 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.56ms)
+Completed 200 OK in 6ms (Views: 1.1ms | ActiveRecord: 2.3ms)
+
+
+Started PUT "/users/9" for 127.0.0.1 at 2017-02-21 16:09:23 +0000
+Processing by UsersController#update as HTML
+  Parameters: {"id"=>"9", "first_name"=>"Tommy", "last_name"=>"Duckworth", "address"=>"7 Henderson Road, London", "postcode"=>"SW18 3RR", "dob"=>"1991-01-13", "email"=>"jeff@george.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>"http://fillmurray.com/304/304", "user"=>{"id"=>"9", "email"=>"jeff@george.com", "first_name"=>"Tommy", "last_name"=>"Duckworth", "postcode"=>"SW18 3RR", "image"=>"http://fillmurray.com/304/304", "address"=>"7 Henderson Road, London", "dob"=>"1991-01-13"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 3.3ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/users_controller.rb:27:in `update'
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 16:13:14 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.21ms)
+Completed 200 OK in 576ms (Views: 100.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 16:13:17 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.87ms)
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 1.6ms)
+
+
+Started PUT "/users/9" for 127.0.0.1 at 2017-02-21 16:13:20 +0000
+Processing by UsersController#update as HTML
+  Parameters: {"id"=>"9", "first_name"=>"Tommy", "last_name"=>"Duckworth", "address"=>"7 Henderson Road, London", "postcode"=>"SW18 3RR", "dob"=>"1991-01-13", "email"=>"jeff@george.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>"http://fillmurray.com/304/304", "user"=>{"id"=>"9", "email"=>"jeff@george.com", "first_name"=>"Tommy", "last_name"=>"Duckworth", "postcode"=>"SW18 3RR", "image"=>"http://fillmurray.com/304/304", "address"=>"7 Henderson Road, London", "dob"=>"1991-01-13"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/users_controller.rb:48)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (134.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "jeff@george.com"], ["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "users" SET "first_name" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["first_name", "Tommy"], ["updated_at", 2017-02-21 16:13:21 UTC], ["id", 9]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.7ms)
+Completed 200 OK in 701ms (Views: 1.8ms | ActiveRecord: 138.6ms)
+
+
