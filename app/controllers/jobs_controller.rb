@@ -16,7 +16,8 @@ class JobsController < ApplicationController
   # POST /jobs
   def create
     @job = Job.new(job_params)
-
+    @job.owner_id = @current_user.id
+    
     if @job.save
       render json: @job, status: :created, location: @job
     else
@@ -46,6 +47,8 @@ class JobsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def job_params
-      params.fetch(:job, {})
+      hash = {}
+      hash.merge! params.slice(:title, :description, :location, :postcode, :time)
+      hash
     end
 end
