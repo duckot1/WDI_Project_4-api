@@ -2262,3 +2262,78 @@ DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5
 Completed 201 Created in 1017ms (Views: 78.9ms | ActiveRecord: 396.8ms)
 
 
+Started GET "/jobs" for 127.0.0.1 at 2017-02-21 14:01:55 +0000
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (50.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from index at /Users/Tom/development/WDI_Project_4-api/app/controllers/jobs_controller.rb:8)
+No serializer found for resource: #<Job id: 2, title: "Cleaner", description: "Clean me please.", location: "8 Guilford Cresent", postcode: "E5 6HY", time: "2000-01-01 08:00:00", date: "2017-05-14", owner_id: 6, created_at: "2017-02-20 15:22:38", updated_at: "2017-02-20 15:22:38", tasker_id: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Job::ActiveRecord_Relation (4.63ms)
+Completed 200 OK in 670ms (Views: 84.4ms | ActiveRecord: 74.4ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-02-21 14:08:28 +0000
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (1.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+No serializer found for resource: #<Job id: 2, title: "Cleaner", description: "Clean me please.", location: "8 Guilford Cresent", postcode: "E5 6HY", time: "2000-01-01 08:00:00", date: "2017-05-14", owner_id: 6, created_at: "2017-02-20 15:22:38", updated_at: "2017-02-20 15:22:38", tasker_id: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Job::ActiveRecord_Relation (139.28ms)
+Completed 200 OK in 255ms (Views: 202.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-02-21 14:09:31 +0000
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+No serializer found for resource: #<Job id: 2, title: "Cleaner", description: "Clean me please.", location: "8 Guilford Cresent", postcode: "E5 6HY", time: "2000-01-01 08:00:00", date: "2017-05-14", owner_id: 6, created_at: "2017-02-20 15:22:38", updated_at: "2017-02-20 15:22:38", tasker_id: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Job::ActiveRecord_Relation (1.68ms)
+Completed 200 OK in 9ms (Views: 4.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-02-21 14:14:31 +0000
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+No serializer found for resource: #<Job id: 2, title: "Cleaner", description: "Clean me please.", location: "8 Guilford Cresent", postcode: "E5 6HY", time: "2000-01-01 08:00:00", date: "2017-05-14", owner_id: 6, created_at: "2017-02-20 15:22:38", updated_at: "2017-02-20 15:22:38", tasker_id: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Job::ActiveRecord_Relation (357.09ms)
+Completed 200 OK in 412ms (Views: 372.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-02-21 14:14:42 +0000
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+No serializer found for resource: #<Job id: 2, title: "Cleaner", description: "Clean me please.", location: "8 Guilford Cresent", postcode: "E5 6HY", time: "2000-01-01 08:00:00", date: "2017-05-14", owner_id: 6, created_at: "2017-02-20 15:22:38", updated_at: "2017-02-20 15:22:38", tasker_id: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Job::ActiveRecord_Relation (1.81ms)
+Completed 200 OK in 11ms (Views: 7.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 14:15:27 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (7.8ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (87.88ms)
+Completed 200 OK in 547ms (Views: 92.8ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-21 14:15:52 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (1.16ms)
+Completed 200 OK in 8ms (Views: 2.9ms | ActiveRecord: 1.6ms)
+
+
