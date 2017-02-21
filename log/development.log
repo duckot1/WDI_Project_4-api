@@ -3164,3 +3164,611 @@ DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5
 Completed 200 OK in 701ms (Views: 1.8ms | ActiveRecord: 138.6ms)
 
 
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 16:17:05 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (18.47ms)
+Completed 200 OK in 52ms (Views: 23.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 16:17:17 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.06ms)
+Completed 200 OK in 12ms (Views: 2.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 16:17:56 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.14ms)
+Completed 200 OK in 82ms (Views: 55.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-02-21 16:18:06 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.41ms)
+Completed 200 OK in 11ms (Views: 4.0ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/users/9" for 127.0.0.1 at 2017-02-21 16:18:09 +0000
+Processing by UsersController#destroy as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (97.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 184ms (ActiveRecord: 102.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-02-21 16:18:19 +0000
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"jeff@george.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"jeff@george.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jeff@george.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.89ms)
+Completed 401 Unauthorized in 109ms (Views: 93.9ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-02-21 16:18:43 +0000
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"jeff@george.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"jeff@george.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (20.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jeff@george.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 401 Unauthorized in 57ms (Views: 2.1ms | ActiveRecord: 21.0ms)
+
+
+Started POST "/register" for 127.0.0.1 at 2017-02-21 16:20:43 +0000
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"first_name"=>"Phil", "last_name"=>"Grimes", "image"=>"http://fillmurray.com/302/302", "email"=>"phil@philly.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"Henderson Road", "postcode"=>"SW18 3RR", "dob"=>"1991-01-13", "authentication"=>{"first_name"=>"Phil", "last_name"=>"Grimes", "image"=>"http://fillmurray.com/302/302", "email"=>"phil@philly.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"Henderson Road", "postcode"=>"SW18 3RR", "dob"=>"1991-01-13"}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/authentications_controller.rb:27)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (3.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "phil@philly.com"], ["LIMIT", 1]]
+  [1m[35mSQL (197.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "first_name", "last_name", "postcode", "image", "address", "dob") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "phil@philly.com"], ["password_digest", "$2a$10$.ZrLA767RasjUX5z/5yyzOkslG2EEwBQM.Bww4Pu7AIImoQ.LiX6e"], ["created_at", 2017-02-21 16:20:44 UTC], ["updated_at", 2017-02-21 16:20:44 UTC], ["first_name", "Phil"], ["last_name", "Grimes"], ["postcode", "SW18 3RR"], ["image", "http://fillmurray.com/302/302"], ["address", "Henderson Road"], ["dob", Sun, 13 Jan 1991]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.37ms)
+Completed 200 OK in 860ms (Views: 28.0ms | ActiveRecord: 204.0ms)
+
+
+Started GET "/users/11" for 127.0.0.1 at 2017-02-21 16:20:44 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (68.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.67ms)
+Completed 200 OK in 254ms (Views: 64.1ms | ActiveRecord: 68.6ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-02-21 16:20:45 +0000
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from index at /Users/Tom/development/WDI_Project_4-api/app/controllers/jobs_controller.rb:8)
+No serializer found for resource: #<Job id: 2, title: "Cleaner", description: "Clean me please.", location: "8 Guilford Cresent", postcode: "E5 6HY", time: "2000-01-01 08:00:00", date: "2017-05-14", owner_id: 6, created_at: "2017-02-20 15:22:38", updated_at: "2017-02-20 15:22:38", tasker_id: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Job::ActiveRecord_Relation (1.12ms)
+Completed 200 OK in 206ms (Views: 152.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/11" for 127.0.0.1 at 2017-02-21 16:21:04 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.92ms)
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 2.3ms)
+
+
+Started DELETE "/users/11" for 127.0.0.1 at 2017-02-21 16:21:07 +0000
+Processing by UsersController#destroy as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (2.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (55.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 11]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 73ms (ActiveRecord: 68.9ms)
+
+
+Started POST "/register" for 127.0.0.1 at 2017-02-21 16:24:42 +0000
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"first_name"=>"Phi", "last_name"=>"Grimes", "image"=>"http://fillmurray.com/304/304", "email"=>"jub@jub.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"Henderson Road", "postcode"=>"SW18 3RR", "dob"=>"1991-01-13", "authentication"=>{"first_name"=>"Phi", "last_name"=>"Grimes", "image"=>"http://fillmurray.com/304/304", "email"=>"jub@jub.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"Henderson Road", "postcode"=>"SW18 3RR", "dob"=>"1991-01-13"}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/authentications_controller.rb:27)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jub@jub.com"], ["LIMIT", 1]]
+  [1m[35mSQL (52.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "first_name", "last_name", "postcode", "image", "address", "dob") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "jub@jub.com"], ["password_digest", "$2a$10$fR6UQ9xWlGlTXi1k3xNBbOBXVb5cyBof/DHwXojbGZi4c8oXJg4Gm"], ["created_at", 2017-02-21 16:24:42 UTC], ["updated_at", 2017-02-21 16:24:42 UTC], ["first_name", "Phi"], ["last_name", "Grimes"], ["postcode", "SW18 3RR"], ["image", "http://fillmurray.com/304/304"], ["address", "Henderson Road"], ["dob", Sun, 13 Jan 1991]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.91ms)
+Completed 200 OK in 313ms (Views: 8.6ms | ActiveRecord: 54.8ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-02-21 16:24:43 +0000
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mJob Load (93.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+No serializer found for resource: #<Job id: 2, title: "Cleaner", description: "Clean me please.", location: "8 Guilford Cresent", postcode: "E5 6HY", time: "2000-01-01 08:00:00", date: "2017-05-14", owner_id: 6, created_at: "2017-02-20 15:22:38", updated_at: "2017-02-20 15:22:38", tasker_id: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Job::ActiveRecord_Relation (5.37ms)
+Completed 200 OK in 115ms (Views: 10.0ms | ActiveRecord: 94.5ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2017-02-21 16:24:43 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.69ms)
+Completed 200 OK in 9ms (Views: 2.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2017-02-21 16:25:33 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.81ms)
+Completed 200 OK in 8ms (Views: 2.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-02-21 16:25:37 +0000
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (43.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mJob Load (5.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+No serializer found for resource: #<Job id: 2, title: "Cleaner", description: "Clean me please.", location: "8 Guilford Cresent", postcode: "E5 6HY", time: "2000-01-01 08:00:00", date: "2017-05-14", owner_id: 6, created_at: "2017-02-20 15:22:38", updated_at: "2017-02-20 15:22:38", tasker_id: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Job::ActiveRecord_Relation (1.19ms)
+Completed 200 OK in 87ms (Views: 4.5ms | ActiveRecord: 48.4ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2017-02-21 16:25:48 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.1ms)
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-02-21 16:25:54 +0000
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mJob Load (1.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+No serializer found for resource: #<Job id: 2, title: "Cleaner", description: "Clean me please.", location: "8 Guilford Cresent", postcode: "E5 6HY", time: "2000-01-01 08:00:00", date: "2017-05-14", owner_id: 6, created_at: "2017-02-20 15:22:38", updated_at: "2017-02-20 15:22:38", tasker_id: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Job::ActiveRecord_Relation (0.73ms)
+Completed 200 OK in 8ms (Views: 3.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2017-02-21 16:25:57 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (1.19ms)
+Completed 200 OK in 8ms (Views: 1.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2017-02-21 16:31:32 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (20.83ms)
+Completed 200 OK in 57ms (Views: 26.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2017-02-21 16:33:34 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (6.96ms)
+Completed 200 OK in 246ms (Views: 179.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2017-02-21 16:35:13 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (170.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (214.24ms)
+Completed 200 OK in 543ms (Views: 225.3ms | ActiveRecord: 171.6ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2017-02-21 16:36:05 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (57.8ms)
+Completed 200 OK in 404ms (Views: 102.6ms | ActiveRecord: 2.9ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (161.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (71.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (66.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-02-21 16:49:19 UTC], ["updated_at", 2017-02-21 16:49:19 UTC]]
+  [1m[35m (22.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (11.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (5414.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "wdi-project-4-api_development"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (416.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "wdi-project-4-api_development"[0m
+  [1m[35m (228.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "wdi-project-4-api_test"[0m
+  [1m[35m (3728.5ms)[0m  [1m[35mCREATE DATABASE "wdi-project-4-api_development" ENCODING = 'unicode'[0m
+  [1m[35m (935.9ms)[0m  [1m[35mCREATE DATABASE "wdi-project-4-api_test" ENCODING = 'unicode'[0m
+  [1m[35m (356.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7381167824530102995);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20170216121231)
+  [1m[35m (22.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (96.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (113.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170216121231"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddColumnsToUser (20170220014537)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (29.1ms)[0m  [1m[35mALTER TABLE "users" ADD "first_name" character varying[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "last_name" character varying[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "mobile" character varying[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "postcode" character varying[0m
+  [1m[35m (5.6ms)[0m  [1m[35mALTER TABLE "users" ADD "image" character varying[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "address" character varying[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "dob" date[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170220014537"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateJobs (20170220015008)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (35.5ms)[0m  [1m[35mCREATE TABLE "jobs" ("id" serial primary key, "title" character varying, "description" text, "location" character varying, "postcode" character varying, "time" time, "date" date, "owner_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170220015008"]]
+  [1m[35m (51.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateRequests (20170220015109)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (108.0ms)[0m  [1m[35mCREATE TABLE "requests" ("id" serial primary key, "message" text, "job_id" integer, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_7cb12166d9"
+FOREIGN KEY ("job_id")
+  REFERENCES "jobs" ("id")
+, CONSTRAINT "fk_rails_8ead8b1e6b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (151.5ms)[0m  [1m[35mCREATE  INDEX  "index_requests_on_job_id" ON "requests"  ("job_id")[0m
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE  INDEX  "index_requests_on_user_id" ON "requests"  ("user_id")[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170220015109"]]
+  [1m[35m (20.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddTaskeridToJob (20170220022028)
+  [1m[35m (4.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "jobs" ADD "tasker_id" integer[0m
+  [1m[35mSQL (19.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170220022028"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RenameRequestsToApplications (20170221164747)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (17.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170221164747"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (16.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (50.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-02-21 16:50:25 UTC], ["updated_at", 2017-02-21 16:50:25 UTC]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(7381167824530102995)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from <top (required)> at /Users/Tom/development/WDI_Project_4-api/db/seeds.rb:2)
+  [1m[36mRequest Load (30.0ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tom.duckworth91@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "first_name", "last_name", "mobile", "postcode", "image", "address", "dob") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["email", "tom.duckworth91@gmail.com"], ["password_digest", "$2a$10$Cuwn9BP1xp8BlH8U1ezYZ.koYQdI6UIRp7GyV4s.C7yxhigxK.zNm"], ["created_at", 2017-02-21 16:50:27 UTC], ["updated_at", 2017-02-21 16:50:27 UTC], ["first_name", "Tom"], ["last_name", "Duckworth"], ["mobile", "07960191449"], ["postcode", "SW18 3RR"], ["image", "http://fillmurray.com/209/304"], ["address", "7 Henderson Road"], ["dob", Sun, 13 Jan 1991]]
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (71.2ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "description", "location", "postcode", "time", "date", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Cleaner"], ["description", "Clean me please."], ["location", "8 Guilford Cresent"], ["postcode", "E5 6HY"], ["time", 2000-01-01 08:00:00 UTC], ["date", Sun, 14 May 2017], ["owner_id", 1], ["created_at", 2017-02-21 16:50:27 UTC], ["updated_at", 2017-02-21 16:50:27 UTC]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "phil.daniels@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "first_name", "last_name", "mobile", "postcode", "image", "address", "dob") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["email", "phil.daniels@gmail.com"], ["password_digest", "$2a$10$fMVJ1P2HUyGrvsZ2PsrI8ObAZjBIvcm9qNVDXUfcLTrpp7e6P..1W"], ["created_at", 2017-02-21 16:50:27 UTC], ["updated_at", 2017-02-21 16:50:27 UTC], ["first_name", "Phil"], ["last_name", "Daniels"], ["mobile", "07960191459"], ["postcode", "W1 6QU"], ["image", "http://fillmurray.com/300/304"], ["address", "9 Wallaby Way"], ["dob", Mon, 20 Jul 1981]]
+  [1m[35m (13.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "josh@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "first_name", "last_name", "mobile", "postcode", "image", "address", "dob") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["email", "josh@gmail.com"], ["password_digest", "$2a$10$eq2KVGGvxt9Z7BDEPMxpXugIlDQx83NB9vfZpbIBQ9e.doWv9EFEy"], ["created_at", 2017-02-21 16:50:28 UTC], ["updated_at", 2017-02-21 16:50:28 UTC], ["first_name", "Josh"], ["last_name", "Gregson"], ["mobile", "07960143459"], ["postcode", "NW2 4AL"], ["image", "http://fillmurray.com/310/320"], ["address", "9 Sydney Street"], ["dob", Thu, 21 Apr 1983]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (13.6ms)[0m  [1m[32mINSERT INTO "requests" ("message", "job_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "I'm up for it"], ["job_id", 1], ["user_id", 2], ["created_at", 2017-02-21 16:50:28 UTC], ["updated_at", 2017-02-21 16:50:28 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "requests" ("message", "job_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "I am well up for this"], ["job_id", 1], ["user_id", 3], ["created_at", 2017-02-21 16:50:28 UTC], ["updated_at", 2017-02-21 16:50:28 UTC]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mRequest Load (1.9ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+Started GET "/jobs/2" for 127.0.0.1 at 2017-02-21 17:00:08 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 593ms (Views: 151.4ms | ActiveRecord: 31.9ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2017-02-21 17:01:23 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (67.27ms)
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 131ms (Views: 78.2ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-02-21 17:01:45 +0000
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"jub@jub.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"jub@jub.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jub@jub.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.27ms)
+Completed 401 Unauthorized in 23ms (Views: 2.5ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-02-21 17:01:52 +0000
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"jub@jub.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"jub@jub.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jub@jub.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 401 Unauthorized in 6ms (Views: 3.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/register" for 127.0.0.1 at 2017-02-21 17:02:35 +0000
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"first_name"=>"Phil", "last_name"=>"Grimes", "image"=>"http://fillmurray.com/304/304", "email"=>"phil@philly.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"Henderson Road", "postcode"=>"SW18 3RR", "dob"=>"1991-01-13", "authentication"=>{"first_name"=>"Phil", "last_name"=>"Grimes", "image"=>"http://fillmurray.com/304/304", "email"=>"phil@philly.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"Henderson Road", "postcode"=>"SW18 3RR", "dob"=>"1991-01-13"}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/authentications_controller.rb:27)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "phil@philly.com"], ["LIMIT", 1]]
+  [1m[35mSQL (50.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "first_name", "last_name", "postcode", "image", "address", "dob") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "phil@philly.com"], ["password_digest", "$2a$10$uSzyx0YOWe3JM7Jr/PpuoOVWffPbFQ0qUUW76OHCGCsgGMZjCMcaK"], ["created_at", 2017-02-21 17:02:36 UTC], ["updated_at", 2017-02-21 17:02:36 UTC], ["first_name", "Phil"], ["last_name", "Grimes"], ["postcode", "SW18 3RR"], ["image", "http://fillmurray.com/304/304"], ["address", "Henderson Road"], ["dob", Sun, 13 Jan 1991]]
+  [1m[35m (39.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (556.08ms)
+Completed 200 OK in 2122ms (Views: 574.3ms | ActiveRecord: 91.5ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2017-02-21 17:02:37 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.5ms)
+Completed 200 OK in 13ms (Views: 8.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-02-21 17:02:37 +0000
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mJob Load (1.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from index at /Users/Tom/development/WDI_Project_4-api/app/controllers/jobs_controller.rb:8)
+No serializer found for resource: #<Job id: 1, title: "Cleaner", description: "Clean me please.", location: "8 Guilford Cresent", postcode: "E5 6HY", time: "2000-01-01 08:00:00", date: "2017-05-14", owner_id: 1, created_at: "2017-02-21 16:50:27", updated_at: "2017-02-21 16:50:27", tasker_id: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Job::ActiveRecord_Relation (0.85ms)
+Completed 200 OK in 233ms (Views: 177.7ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/jobs/1" for 127.0.0.1 at 2017-02-21 17:02:46 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mJob Load (1.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (2.74ms)
+Completed 200 OK in 23ms (Views: 3.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/jobs/1" for 127.0.0.1 at 2017-02-21 17:04:30 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mJob Load (2.9ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Job (201.94ms)
+Completed 200 OK in 292ms (Views: 207.3ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2017-02-21 17:04:34 +0000
+Processing by RequestsController#create as HTML
+  Parameters: {"message"=>"I would love to do this!", "job_id"=>"1", "request"=>{"message"=>"I would love to do this!", "job_id"=>"1"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/requests_controller.rb:50)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (10.2ms)[0m  [1m[32mINSERT INTO "requests" ("message", "job_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "I would love to do this!"], ["job_id", 1], ["user_id", 4], ["created_at", 2017-02-21 17:04:35 UTC], ["updated_at", 2017-02-21 17:04:35 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Request (0.7ms)
+Completed 201 Created in 306ms (Views: 5.6ms | ActiveRecord: 22.1ms)
+
+
+  [1m[35m (17.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7381167824530102995);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (17.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddStatusToRequest (20170221175454)
+  [1m[35m (18.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (152.1ms)[0m  [1m[35mALTER TABLE "requests" ADD "status" integer[0m
+  [1m[35mSQL (34.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170221175454"]]
+  [1m[35m (27.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7381167824530102995)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (3.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (5439.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "wdi-project-4-api_development"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (441.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "wdi-project-4-api_development"[0m
+  [1m[35m (169.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "wdi-project-4-api_test"[0m
+  [1m[35m (1999.4ms)[0m  [1m[35mCREATE DATABASE "wdi-project-4-api_development" ENCODING = 'unicode'[0m
+  [1m[35m (633.4ms)[0m  [1m[35mCREATE DATABASE "wdi-project-4-api_test" ENCODING = 'unicode'[0m
+  [1m[35m (136.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7381167824530102995);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20170216121231)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (82.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (8.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170216121231"]]
+  [1m[35m (37.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddColumnsToUser (20170220014537)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "users" ADD "first_name" character varying[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "last_name" character varying[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "mobile" character varying[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "users" ADD "postcode" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "image" character varying[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "address" character varying[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "dob" date[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170220014537"]]
+  [1m[35m (15.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateJobs (20170220015008)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (23.2ms)[0m  [1m[35mCREATE TABLE "jobs" ("id" serial primary key, "title" character varying, "description" text, "location" character varying, "postcode" character varying, "time" time, "date" date, "owner_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170220015008"]]
+  [1m[35m (21.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateRequests (20170220015109)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (68.9ms)[0m  [1m[35mCREATE TABLE "requests" ("id" serial primary key, "message" text, "job_id" integer, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_7cb12166d9"
+FOREIGN KEY ("job_id")
+  REFERENCES "jobs" ("id")
+, CONSTRAINT "fk_rails_8ead8b1e6b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (13.8ms)[0m  [1m[35mCREATE  INDEX  "index_requests_on_job_id" ON "requests"  ("job_id")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_requests_on_user_id" ON "requests"  ("user_id")[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170220015109"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddTaskeridToJob (20170220022028)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "jobs" ADD "tasker_id" integer[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170220022028"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddStatusToRequest (20170221175454)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "requests" ADD "status" integer[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170221175454"]]
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (17.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-02-21 18:01:30 UTC], ["updated_at", 2017-02-21 18:01:30 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7381167824530102995)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (29.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mJob Load (2.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from <top (required)> at /Users/Tom/development/WDI_Project_4-api/db/seeds.rb:2)
+  [1m[36mRequest Load (1.3ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tom.duckworth91@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (32.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "first_name", "last_name", "mobile", "postcode", "image", "address", "dob") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["email", "tom.duckworth91@gmail.com"], ["password_digest", "$2a$10$JAjAHowV5bgcqZlGS32DWOu1yyMurBhvES5.sb5seGcHuh8VhzuDO"], ["created_at", 2017-02-21 18:01:32 UTC], ["updated_at", 2017-02-21 18:01:32 UTC], ["first_name", "Tom"], ["last_name", "Duckworth"], ["mobile", "07960191449"], ["postcode", "SW18 3RR"], ["image", "http://fillmurray.com/209/304"], ["address", "7 Henderson Road"], ["dob", Sun, 13 Jan 1991]]
+  [1m[35m (30.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (49.8ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "description", "location", "postcode", "time", "date", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Cleaner"], ["description", "Clean me please."], ["location", "8 Guilford Cresent"], ["postcode", "E5 6HY"], ["time", 2000-01-01 08:00:00 UTC], ["date", Sun, 14 May 2017], ["owner_id", 1], ["created_at", 2017-02-21 18:01:32 UTC], ["updated_at", 2017-02-21 18:01:32 UTC]]
+  [1m[35m (54.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "phil.daniels@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "first_name", "last_name", "mobile", "postcode", "image", "address", "dob") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["email", "phil.daniels@gmail.com"], ["password_digest", "$2a$10$XJDTQ6lYJtw4UbymujJz3.xw4vTZtwh2iFy.O0Kxq7.q3a6izaQeu"], ["created_at", 2017-02-21 18:01:32 UTC], ["updated_at", 2017-02-21 18:01:32 UTC], ["first_name", "Phil"], ["last_name", "Daniels"], ["mobile", "07960191459"], ["postcode", "W1 6QU"], ["image", "http://fillmurray.com/300/304"], ["address", "9 Wallaby Way"], ["dob", Mon, 20 Jul 1981]]
+  [1m[35m (20.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "josh@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "first_name", "last_name", "mobile", "postcode", "image", "address", "dob") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["email", "josh@gmail.com"], ["password_digest", "$2a$10$B38Yf.vUGOri4p1XGWlIfeW96LOJUi6iQcj2oXt/flhIVuvRaZrGq"], ["created_at", 2017-02-21 18:01:32 UTC], ["updated_at", 2017-02-21 18:01:32 UTC], ["first_name", "Josh"], ["last_name", "Gregson"], ["mobile", "07960143459"], ["postcode", "NW2 4AL"], ["image", "http://fillmurray.com/310/320"], ["address", "9 Sydney Street"], ["dob", Thu, 21 Apr 1983]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (83.1ms)[0m  [1m[32mINSERT INTO "requests" ("message", "job_id", "user_id", "created_at", "updated_at", "status") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["message", "I'm up for it"], ["job_id", 1], ["user_id", 2], ["created_at", 2017-02-21 18:01:32 UTC], ["updated_at", 2017-02-21 18:01:32 UTC], ["status", 1]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "requests" ("message", "job_id", "user_id", "created_at", "updated_at", "status") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["message", "I am well up for this"], ["job_id", 1], ["user_id", 3], ["created_at", 2017-02-21 18:01:32 UTC], ["updated_at", 2017-02-21 18:01:32 UTC], ["status", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRequest Load (1.5ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  [1m[36mRequest Load (0.8ms)[0m  [1m[34mSELECT  "requests".* FROM "requests" ORDER BY "requests"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mRequest Load (7.3ms)[0m  [1m[34mSELECT  "requests".* FROM "requests" ORDER BY "requests"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from irb_binding at (irb):7)
+  [1m[36mJob Load (4.9ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (25.7ms)[0m  [1m[33mUPDATE "requests" SET "updated_at" = $1, "status" = $2 WHERE "requests"."id" = $3[0m  [["updated_at", 2017-02-21 18:04:25 UTC], ["status", 2], ["id", 1]]
+  [1m[35m (22.1ms)[0m  [1m[35mCOMMIT[0m
