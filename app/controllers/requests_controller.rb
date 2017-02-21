@@ -8,7 +8,12 @@ class RequestsController < ApplicationController
     render json: @requests
   end
 
-  # GET /requests/1
+  def jobApplications
+    @requests = Request.where("job_id = #{params[:id]}")
+
+    render json: @requests
+  end
+
   def show
     render json: @request
   end
@@ -17,6 +22,7 @@ class RequestsController < ApplicationController
   def create
     @request = Request.new(request_params)
     @request.user_id = @current_user.id
+    @request.status = 1
     if @request.save
       render json: @request, status: :created, location: @request
     else
@@ -47,7 +53,7 @@ class RequestsController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def request_params
       hash = {}
-      hash.merge! params.slice(:message, :job_id)
+      hash.merge! params.slice(:message, :job_id, :status)
       hash
     end
 end
