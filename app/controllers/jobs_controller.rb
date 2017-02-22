@@ -8,6 +8,18 @@ class JobsController < ApplicationController
     render json: @jobs
   end
 
+  def applied
+    @request = Request.where("user_id = #{@current_user.id}")
+    p @request
+    @jobs = Job.where("id = #{@request.first.job_id}")
+
+    render json: @jobs
+  end
+
+  def active
+
+  end
+
   # GET /jobs/1
   def show
     render json: @job
@@ -17,7 +29,7 @@ class JobsController < ApplicationController
   def create
     @job = Job.new(job_params)
     @job.owner_id = @current_user.id
-    
+
     if @job.save
       render json: @job, status: :created, location: @job
     else

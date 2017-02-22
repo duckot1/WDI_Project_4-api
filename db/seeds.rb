@@ -11,4 +11,4 @@ user2 = User.create!(email: "phil.daniels@gmail.com", password: "password", pass
 user3 = User.create!(email: "josh@gmail.com", password: "password", password_confirmation: "password", first_name: "Josh", last_name: "Gregson", mobile: "07960143459", address: "9 Sydney Street", postcode: "NW2 4AL", image: "http://fillmurray.com/310/320", dob: "1983-04-21")
 
 request1 = job1.requests.create!(message: "I'm up for it", user_id: user2.id, status: 1)
-request2 = job1.requests.create!(message: "I am well up for this", user_id: user3.id, status: 1)
+# request2 = job1.requests.create!(message: "I am well up for this", user_id: user3.id, status: 1)

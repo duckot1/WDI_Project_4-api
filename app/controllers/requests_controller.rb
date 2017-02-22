@@ -9,7 +9,7 @@ class RequestsController < ApplicationController
   end
 
   def jobApplications
-    @requests = Request.where("job_id = #{params[:id]}").joins(:user);
+    @requests = Request.where("job_id = #{params[:id]}");
 
     render json: @requests
   end

@@ -1,6 +1,7 @@
 class Job < ApplicationRecord
   belongs_to :owner, class_name: "User", foreign_key: :owner_id
   belongs_to :tasker, class_name: "User", foreign_key: :tasker_id, required: false
+  has_many :applicants, class_name: "User", foreign_key: :applicant_id
   has_many :requests
 
   validates :location, presence: true

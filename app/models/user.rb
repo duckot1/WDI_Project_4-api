@@ -4,6 +4,7 @@ class User < ApplicationRecord
   has_many :jobs_as_owner, class_name: "Job", foreign_key: :owner_id
   has_many :requests
   has_many :jobs_as_tasker, class_name: "Job", foreign_key: :tasker_id
+  has_many :jobs_as_applicant, class_name: "Job", foreign_key: :applicant_key
 
   validates :email, presence: true, uniqueness: true
   validates :address, presence: true
