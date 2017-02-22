@@ -1,3 +1,3 @@
 class RequestSerializer < ActiveModel::Serializer
-  attributes :job, :user, :message, :id
+  attributes :job, :user, :message, :id, :status
 end

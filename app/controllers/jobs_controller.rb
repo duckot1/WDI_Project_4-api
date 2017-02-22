@@ -16,8 +16,9 @@ class JobsController < ApplicationController
     render json: @jobs
   end
 
-  def active
-
+  def myJobs
+    @jobs = Job.where("owner_id = #{@current_user.id}")
+    render json: @jobs
   end
 
   # GET /jobs/1

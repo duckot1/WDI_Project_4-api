@@ -4,11 +4,17 @@ class Request < ApplicationRecord
 
   enum status: [ :rejected, :pending, :accepted ]
 
-  # after_create :set_applicant
+  before_save :accept
 
-  # def set_applicant
-  #   job = Job.where("id = #{self.job_id}")
-  #   job.first.applicants << self.user
-  #   p job
-  # end
+  def accept
+    if !self.new_record? && self.status == "pending"
+      job = Job.find_by_id(self.job_id)
+      job.requests.each do |request|
+        request.status = 0
+        request.save
+      end
+      self.status = 2
+    end
+  end
+
 end
