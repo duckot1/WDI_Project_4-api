@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'jobs/applied', to: 'jobs#applied'
   get 'jobs/myjobs', to: 'jobs#myJobs'
+  get 'jobs/booked', to: 'jobs#booked'
   resources :users
   resources :jobs
   resources :requests

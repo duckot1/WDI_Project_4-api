@@ -13,7 +13,10 @@ class Request < ApplicationRecord
         request.status = 0
         request.save
       end
+      job.tasker_id = self.user_id
+      job.save
       self.status = 2
+      p job
     end
   end
 

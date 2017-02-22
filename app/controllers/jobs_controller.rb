@@ -3,7 +3,12 @@ class JobsController < ApplicationController
 
   # GET /jobs
   def index
-    @jobs = Job.all
+    @requests = Request.where("user_id = #{@current_user.id}")
+    job_ids = []
+    @requests.each do |request|
+      job_ids << request.job_id
+    end
+    @jobs = Job.where.not({ id: job_ids, owner_id: @current_user.id })
 
     render json: @jobs
   end
@@ -18,6 +23,12 @@ class JobsController < ApplicationController
 
   def myJobs
     @jobs = Job.where("owner_id = #{@current_user.id}")
+    render json: @jobs
+  end
+
+  def booked
+    @jobs = Job.where("tasker_id = #{@current_user.id}")
+    p @jobs
     render json: @jobs
   end
 

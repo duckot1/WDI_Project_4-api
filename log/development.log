@@ -8759,3 +8759,711 @@ Processing by RequestsController#jobApplications as HTML
 Completed 200 OK in 402ms (Views: 397.5ms | ActiveRecord: 3.0ms)
 
 
+Started POST "/register" for 127.0.0.1 at 2017-02-22 10:46:03 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (49.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"first_name"=>"Jeb", "last_name"=>"Jeb", "image"=>"http://fillmurray.com/303/303", "email"=>"jeb@jeb.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"Henderson Road", "postcode"=>"SW19 3RR", "dob"=>"1991-01-13", "authentication"=>{"first_name"=>"Jeb", "last_name"=>"Jeb", "image"=>"http://fillmurray.com/303/303", "email"=>"jeb@jeb.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"Henderson Road", "postcode"=>"SW19 3RR", "dob"=>"1991-01-13"}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/authentications_controller.rb:27)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (38.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jeb@jeb.com"], ["LIMIT", 1]]
+  [1m[35mSQL (51.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "first_name", "last_name", "postcode", "image", "address", "dob") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "jeb@jeb.com"], ["password_digest", "$2a$10$.G.v36xyn5tDo/2zxn3Vg.u5RFXxYTCt5NRro3pg7qtykw.CAk92e"], ["created_at", 2017-02-22 10:46:06 UTC], ["updated_at", 2017-02-22 10:46:06 UTC], ["first_name", "Jeb"], ["last_name", "Jeb"], ["postcode", "SW19 3RR"], ["image", "http://fillmurray.com/303/303"], ["address", "Henderson Road"], ["dob", Sun, 13 Jan 1991]]
+  [1m[35m (49.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (51.64ms)
+Completed 200 OK in 775ms (Views: 108.2ms | ActiveRecord: 216.9ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2017-02-22 10:46:07 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.51ms)
+Completed 200 OK in 6ms (Views: 1.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-02-22 10:46:07 +0000
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRequest Load (1.3ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE (user_id = 5)[0m
+  [1m[36mJob Load (1.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE (1=1)[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from index at /Users/Tom/development/WDI_Project_4-api/app/controllers/jobs_controller.rb:14)
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (39.06ms)
+Completed 200 OK in 145ms (Views: 76.7ms | ActiveRecord: 12.1ms)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2017-02-22 10:46:36 +0000
+Processing by JobsController#create as HTML
+  Parameters: {"title"=>"My Job", "location"=>"My place", "postcode"=>"SW3 6NR", "description"=>"My job", "time"=>"2000-01-01T08:00:00.000Z", "job"=>{"title"=>"My Job", "description"=>"My job", "location"=>"My place", "postcode"=>"SW3 6NR", "time"=>"2000-01-01T08:00:00.000Z"}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/jobs_controller.rb:70)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (10.6ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "description", "location", "postcode", "time", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "My Job"], ["description", "My job"], ["location", "My place"], ["postcode", "SW3 6NR"], ["time", 2000-01-01 08:00:00 UTC], ["owner_id", 5], ["created_at", 2017-02-22 10:46:36 UTC], ["updated_at", 2017-02-22 10:46:36 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered JobSerializer with ActiveModelSerializers::Adapter::Attributes (1.44ms)
+Completed 201 Created in 99ms (Views: 4.2ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-02-22 10:46:36 +0000
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (29.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRequest Load (2.5ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE (user_id = 5)[0m
+  [1m[36mJob Load (67.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE (1=1)[0m
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (15.97ms)
+Completed 200 OK in 120ms (Views: 17.2ms | ActiveRecord: 99.7ms)
+
+
+Started GET "/jobs/1" for 127.0.0.1 at 2017-02-22 10:47:32 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from set_job at /Users/Tom/development/WDI_Project_4-api/app/controllers/jobs_controller.rb:64)
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered JobSerializer with ActiveModelSerializers::Adapter::Attributes (33.29ms)
+Completed 200 OK in 383ms (Views: 50.1ms | ActiveRecord: 39.5ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2017-02-22 10:47:35 +0000
+Processing by RequestsController#create as HTML
+  Parameters: {"message"=>"I would love to do this!", "job_id"=>"1", "request"=>{"message"=>"I would love to do this!", "job_id"=>"1"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/requests_controller.rb:56)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (141.0ms)[0m  [1m[32mINSERT INTO "requests" ("message", "job_id", "user_id", "created_at", "updated_at", "status") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["message", "I would love to do this!"], ["job_id", 1], ["user_id", 5], ["created_at", 2017-02-22 10:47:35 UTC], ["updated_at", 2017-02-22 10:47:35 UTC], ["status", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered RequestSerializer with ActiveModelSerializers::Adapter::Attributes (2.76ms)
+Completed 201 Created in 200ms (Views: 25.6ms | ActiveRecord: 150.7ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-02-22 10:47:40 +0000
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (47.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRequest Load (4.7ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE (user_id = 5)[0m
+  [1m[36mJob Load (22.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE ("jobs"."id" != 1)[0m
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (70.0ms)
+Completed 200 OK in 158ms (Views: 76.6ms | ActiveRecord: 75.8ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2017-02-22 10:47:42 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered JobSerializer with ActiveModelSerializers::Adapter::Attributes (3.15ms)
+Completed 200 OK in 11ms (Views: 4.0ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2017-02-22 10:47:44 +0000
+Processing by RequestsController#create as HTML
+  Parameters: {"message"=>"I would love to do this!", "job_id"=>"3", "request"=>{"message"=>"I would love to do this!", "job_id"=>"3"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/requests_controller.rb:56)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "requests" ("message", "job_id", "user_id", "created_at", "updated_at", "status") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["message", "I would love to do this!"], ["job_id", 3], ["user_id", 5], ["created_at", 2017-02-22 10:47:44 UTC], ["updated_at", 2017-02-22 10:47:44 UTC], ["status", 1]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered RequestSerializer with ActiveModelSerializers::Adapter::Attributes (3.74ms)
+Completed 201 Created in 22ms (Views: 5.3ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-02-22 10:47:45 +0000
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRequest Load (4.5ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE (user_id = 5)[0m
+  [1m[36mJob Load (16.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE ("jobs"."id" NOT IN (1, 3))[0m
+[active_model_serializers]   [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (23.68ms)
+Completed 200 OK in 55ms (Views: 24.6ms | ActiveRecord: 26.8ms)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2017-02-22 10:49:52 +0000
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Tom/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+Processing by JobsController#create as HTML
+  Parameters: {"title"=>"My job again", "location"=>"My place", "postcode"=>"Sw18 3RR", "description"=>"my place my job", "time"=>"2000-01-01T08:00:00.000Z", "job"=>{"title"=>"My job again", "description"=>"my place my job", "location"=>"My place", "postcode"=>"Sw18 3RR", "time"=>"2000-01-01T08:00:00.000Z"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/jobs_controller.rb:69)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "description", "location", "postcode", "time", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "My job again"], ["description", "my place my job"], ["location", "My place"], ["postcode", "Sw18 3RR"], ["time", 2000-01-01 08:00:00 UTC], ["owner_id", 5], ["created_at", 2017-02-22 10:49:52 UTC], ["updated_at", 2017-02-22 10:49:52 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered JobSerializer with ActiveModelSerializers::Adapter::Attributes (2.38ms)
+Completed 201 Created in 181ms (Views: 20.4ms | ActiveRecord: 30.0ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-02-22 10:49:52 +0000
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRequest Load (0.7ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE (user_id = 5)[0m
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE ("jobs"."id" NOT IN (1, 3)) AND ("jobs"."owner_id" != $1)[0m  [["owner_id", 5]]
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.63ms)
+Completed 200 OK in 54ms (Views: 9.8ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2017-02-22 10:51:40 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered JobSerializer with ActiveModelSerializers::Adapter::Attributes (137.08ms)
+Completed 200 OK in 235ms (Views: 151.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/jobs/2/applications" for 127.0.0.1 at 2017-02-22 10:51:43 +0000
+Processing by RequestsController#jobApplications as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRequest Load (2.0ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE (job_id = 2)[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 15ms (Views: 2.6ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/jobs/2/applications" for 127.0.0.1 at 2017-02-22 11:02:22 +0000
+Processing by RequestsController#jobApplications as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRequest Load (0.9ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE (job_id = 2)[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 310ms (Views: 3.4ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/jobs/2/applications" for 127.0.0.1 at 2017-02-22 11:03:27 +0000
+Processing by RequestsController#jobApplications as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRequest Load (1.1ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE (job_id = 2)[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.79ms)
+Completed 200 OK in 221ms (Views: 81.1ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/jobs/2/applications" for 127.0.0.1 at 2017-02-22 11:03:31 +0000
+Processing by RequestsController#jobApplications as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRequest Load (0.7ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE (job_id = 2)[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.64ms)
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/jobs/2/applications" for 127.0.0.1 at 2017-02-22 11:04:00 +0000
+Processing by RequestsController#jobApplications as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRequest Load (2.6ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE (job_id = 2)[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 13ms (Views: 2.0ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/jobs/2/applications" for 127.0.0.1 at 2017-02-22 11:05:06 +0000
+Processing by RequestsController#jobApplications as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRequest Load (0.8ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE (job_id = 2)[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.83ms)
+Completed 200 OK in 193ms (Views: 20.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/jobs/2/applications" for 127.0.0.1 at 2017-02-22 11:06:53 +0000
+Processing by RequestsController#jobApplications as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRequest Load (1.1ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE (job_id = 2)[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.99ms)
+Completed 200 OK in 88ms (Views: 19.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/jobs/2/applications" for 127.0.0.1 at 2017-02-22 11:10:45 +0000
+Processing by RequestsController#jobApplications as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRequest Load (0.8ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE (job_id = 2)[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.15ms)
+Completed 200 OK in 36ms (Views: 11.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/jobs/2/applications" for 127.0.0.1 at 2017-02-22 11:12:04 +0000
+Processing by RequestsController#jobApplications as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRequest Load (0.8ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE (job_id = 2)[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.87ms)
+Completed 200 OK in 43ms (Views: 9.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/jobs/2/applications" for 127.0.0.1 at 2017-02-22 11:13:24 +0000
+Processing by RequestsController#jobApplications as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRequest Load (2.5ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE (job_id = 2)[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.15ms)
+Completed 200 OK in 116ms (Views: 11.7ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/jobs/myjobs" for 127.0.0.1 at 2017-02-22 11:13:52 +0000
+Processing by JobsController#myJobs as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE (owner_id = 5)[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from myJobs at /Users/Tom/development/WDI_Project_4-api/app/controllers/jobs_controller.rb:26)
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (23.42ms)
+Completed 200 OK in 373ms (Views: 109.4ms | ActiveRecord: 17.7ms)
+
+
+Started GET "/jobs/myjobs" for 127.0.0.1 at 2017-02-22 11:13:54 +0000
+Processing by JobsController#myJobs as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE (owner_id = 5)[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.46ms)
+Completed 200 OK in 16ms (Views: 11.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/jobs/applied" for 127.0.0.1 at 2017-02-22 11:14:02 +0000
+Processing by JobsController#applied as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRequest Load (1.8ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE (user_id = 5)[0m
+  [1m[36mJob Load (32.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE (id = 1)[0m
+[active_model_serializers]   [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (13.82ms)
+Completed 200 OK in 76ms (Views: 9.6ms | ActiveRecord: 45.6ms)
+
+
+Started GET "/jobs/applied" for 127.0.0.1 at 2017-02-22 11:14:04 +0000
+Processing by JobsController#applied as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRequest Load (0.8ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE (user_id = 5)[0m
+  [1m[36mJob Load (3.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE (id = 1)[0m
+[active_model_serializers]   [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.66ms)
+Completed 200 OK in 17ms (Views: 7.4ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/jobs/myjobs" for 127.0.0.1 at 2017-02-22 11:14:05 +0000
+Processing by JobsController#myJobs as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mJob Load (1.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE (owner_id = 5)[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.65ms)
+Completed 200 OK in 15ms (Views: 10.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/jobs/applied" for 127.0.0.1 at 2017-02-22 11:14:06 +0000
+Processing by JobsController#applied as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRequest Load (0.8ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE (user_id = 5)[0m
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE (id = 1)[0m
+[active_model_serializers]   [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.88ms)
+Completed 200 OK in 17ms (Views: 7.8ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/jobs/myjobs" for 127.0.0.1 at 2017-02-22 11:15:25 +0000
+Processing by JobsController#myJobs as HTML
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mJob Load (18.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE (owner_id = 5)[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (30.35ms)
+Completed 200 OK in 101ms (Views: 60.7ms | ActiveRecord: 20.9ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-02-22 11:18:58 +0000
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRequest Load (0.9ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE (user_id = 5)[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from index at /Users/Tom/development/WDI_Project_4-api/app/controllers/jobs_controller.rb:11)
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE ("jobs"."id" NOT IN (1, 3)) AND ("jobs"."owner_id" != $1)[0m  [["owner_id", 5]]
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (10.08ms)
+Completed 200 OK in 368ms (Views: 107.9ms | ActiveRecord: 47.7ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2017-02-22 11:19:00 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered JobSerializer with ActiveModelSerializers::Adapter::Attributes (5.05ms)
+Completed 200 OK in 11ms (Views: 5.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/jobs/2/applications" for 127.0.0.1 at 2017-02-22 11:19:01 +0000
+Processing by RequestsController#jobApplications as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRequest Load (0.8ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE (job_id = 2)[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 200 OK in 7ms (Views: 2.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2017-02-22 11:19:07 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mJob Load (3.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered JobSerializer with ActiveModelSerializers::Adapter::Attributes (6.03ms)
+Completed 200 OK in 20ms (Views: 6.5ms | ActiveRecord: 9.6ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2017-02-22 11:19:08 +0000
+Processing by RequestsController#create as HTML
+  Parameters: {"message"=>"I would love to do this!", "job_id"=>"2", "request"=>{"message"=>"I would love to do this!", "job_id"=>"2"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/requests_controller.rb:56)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "requests" ("message", "job_id", "user_id", "created_at", "updated_at", "status") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["message", "I would love to do this!"], ["job_id", 2], ["user_id", 5], ["created_at", 2017-02-22 11:19:08 UTC], ["updated_at", 2017-02-22 11:19:08 UTC], ["status", 1]]
+  [1m[35m (27.5ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered RequestSerializer with ActiveModelSerializers::Adapter::Attributes (1.82ms)
+Completed 201 Created in 97ms (Views: 46.5ms | ActiveRecord: 30.8ms)
+
+
+Started GET "/jobs/2/applications" for 127.0.0.1 at 2017-02-22 11:19:12 +0000
+Processing by RequestsController#jobApplications as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (16.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRequest Load (3.5ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE (job_id = 2)[0m
+[active_model_serializers]   [1m[36mJob Load (52.7ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (64.71ms)
+Completed 200 OK in 99ms (Views: 14.2ms | ActiveRecord: 72.6ms)
+
+
+Started PUT "/requests/8" for 127.0.0.1 at 2017-02-22 11:19:17 +0000
+Processing by RequestsController#update as HTML
+  Parameters: {"job"=>{"id"=>2, "title"=>"Farmer", "description"=>"Need a farmer", "location"=>"Underground", "postcode"=>"SW18 3RR", "time"=>"2000-01-01T08:00:00.000Z", "date"=>nil, "owner_id"=>4, "created_at"=>"2017-02-22T01:24:40.282Z", "updated_at"=>"2017-02-22T01:24:40.282Z", "tasker_id"=>nil, "applicant_id"=>nil}, "user"=>{"id"=>5, "email"=>"jeb@jeb.com", "password_digest"=>"[FILTERED]", "created_at"=>"2017-02-22T10:46:06.904Z", "updated_at"=>"2017-02-22T10:46:06.904Z", "first_name"=>"Jeb", "last_name"=>"Jeb", "mobile"=>nil, "postcode"=>"SW19 3RR", "image"=>"http://fillmurray.com/303/303", "address"=>"Henderson Road", "dob"=>"1991-01-13"}, "message"=>"I would love to do this!", "id"=>"8", "status"=>"pending", "request"=>{"id"=>"8", "message"=>"I would love to do this!", "status"=>"pending"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRequest Load (0.4ms)[0m  [1m[34mSELECT  "requests".* FROM "requests" WHERE "requests"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/requests_controller.rb:56)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRequest Load (0.5ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE "requests"."job_id" = $1[0m  [["job_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (28.0ms)[0m  [1m[33mUPDATE "requests" SET "status" = $1, "updated_at" = $2 WHERE "requests"."id" = $3[0m  [["status", 0], ["updated_at", 2017-02-22 11:19:17 UTC], ["id", 8]]
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "requests" SET "status" = $1, "updated_at" = $2 WHERE "requests"."id" = $3[0m  [["status", 2], ["updated_at", 2017-02-22 11:19:17 UTC], ["id", 8]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered RequestSerializer with ActiveModelSerializers::Adapter::Attributes (1.89ms)
+Completed 200 OK in 143ms (Views: 2.8ms | ActiveRecord: 32.7ms)
+
+
+Started GET "/jobs/myjobs" for 127.0.0.1 at 2017-02-22 11:20:44 +0000
+Processing by JobsController#myJobs as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE (owner_id = 5)[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from myJobs at /Users/Tom/development/WDI_Project_4-api/app/controllers/jobs_controller.rb:26)
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (49.04ms)
+Completed 200 OK in 455ms (Views: 150.0ms | ActiveRecord: 42.1ms)
+
+
+Started GET "/jobs/booked" for 127.0.0.1 at 2017-02-22 11:20:46 +0000
+Processing by JobsController#booked as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE (tasker_id = 5)[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/jobs/applied" for 127.0.0.1 at 2017-02-22 11:21:01 +0000
+Processing by JobsController#applied as HTML
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRequest Load (1.5ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE (user_id = 5)[0m
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE (id = 1)[0m
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.62ms)
+Completed 200 OK in 88ms (Views: 10.3ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/jobs/booked" for 127.0.0.1 at 2017-02-22 11:21:03 +0000
+Processing by JobsController#booked as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE (tasker_id = 5)[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/jobs/applied" for 127.0.0.1 at 2017-02-22 11:21:06 +0000
+Processing by JobsController#applied as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRequest Load (0.7ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE (user_id = 5)[0m
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE (id = 1)[0m
+[active_model_serializers]   [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.44ms)
+Completed 200 OK in 16ms (Views: 7.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/jobs/booked" for 127.0.0.1 at 2017-02-22 11:21:53 +0000
+Processing by JobsController#booked as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE (tasker_id = 5)[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 5ms (Views: 1.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/jobs/myjobs" for 127.0.0.1 at 2017-02-22 11:22:48 +0000
+Processing by JobsController#myJobs as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE (owner_id = 5)[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from myJobs at /Users/Tom/development/WDI_Project_4-api/app/controllers/jobs_controller.rb:26)
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (14.63ms)
+Completed 200 OK in 211ms (Views: 66.9ms | ActiveRecord: 19.6ms)
+
+
+Started GET "/jobs/booked" for 127.0.0.1 at 2017-02-22 11:22:50 +0000
+Processing by JobsController#booked as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mJob Load (12.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE (tasker_id = 5)[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 19ms (Views: 0.9ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-02-22 11:23:46 +0000
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRequest Load (1.2ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE (user_id = 5)[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from index at /Users/Tom/development/WDI_Project_4-api/app/controllers/jobs_controller.rb:11)
+  [1m[36mJob Load (4.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE ("jobs"."id" NOT IN (1, 3, 2)) AND ("jobs"."owner_id" != $1)[0m  [["owner_id", 5]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 200 OK in 241ms (Views: 19.4ms | ActiveRecord: 25.0ms)
+
+
+Started POST "/register" for 127.0.0.1 at 2017-02-22 11:24:26 +0000
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"first_name"=>"George", "last_name"=>"Riddick", "image"=>"http://fillmurray.com/302/302", "email"=>"george@george.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"Henderson", "postcode"=>"SW3 6NR", "dob"=>"1991-01-13", "authentication"=>{"first_name"=>"George", "last_name"=>"Riddick", "image"=>"http://fillmurray.com/302/302", "email"=>"george@george.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "address"=>"Henderson", "postcode"=>"SW3 6NR", "dob"=>"1991-01-13"}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/authentications_controller.rb:27)
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (2.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "george@george.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "first_name", "last_name", "postcode", "image", "address", "dob") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "george@george.com"], ["password_digest", "$2a$10$P5YUQyWQpY7d5mAPYQuxTOPof/tI8ziaYBY2PK5NEtGv0zr2sC2m6"], ["created_at", 2017-02-22 11:24:26 UTC], ["updated_at", 2017-02-22 11:24:26 UTC], ["first_name", "George"], ["last_name", "Riddick"], ["postcode", "SW3 6NR"], ["image", "http://fillmurray.com/302/302"], ["address", "Henderson"], ["dob", Sun, 13 Jan 1991]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.82ms)
+Completed 200 OK in 148ms (Views: 6.8ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-02-22 11:24:26 +0000
+Processing by JobsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mRequest Load (2.6ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE (user_id = 6)[0m
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE (1=1) AND ("jobs"."owner_id" != $1)[0m  [["owner_id", 6]]
+Started GET "/users/6" for 127.0.0.1 at 2017-02-22 11:24:26 +0000
+[active_model_serializers]   [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (21.74ms)
+Completed 200 OK in 205ms (Views: 191.1ms | ActiveRecord: 10.4ms)
+
+
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.72ms)
+Completed 200 OK in 9ms (Views: 2.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2017-02-22 11:24:29 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered JobSerializer with ActiveModelSerializers::Adapter::Attributes (4.7ms)
+Completed 200 OK in 10ms (Views: 4.9ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2017-02-22 11:24:32 +0000
+Processing by RequestsController#create as HTML
+  Parameters: {"message"=>"I would love to do this!", "job_id"=>"2", "request"=>{"message"=>"I would love to do this!", "job_id"=>"2"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/requests_controller.rb:56)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "requests" ("message", "job_id", "user_id", "created_at", "updated_at", "status") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["message", "I would love to do this!"], ["job_id", 2], ["user_id", 6], ["created_at", 2017-02-22 11:24:32 UTC], ["updated_at", 2017-02-22 11:24:32 UTC], ["status", 1]]
+  [1m[35m (23.2ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered RequestSerializer with ActiveModelSerializers::Adapter::Attributes (2.04ms)
+Completed 201 Created in 72ms (Views: 28.7ms | ActiveRecord: 27.5ms)
+
+
+Started GET "/jobs/2/applications" for 127.0.0.1 at 2017-02-22 11:24:35 +0000
+Processing by RequestsController#jobApplications as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mRequest Load (2.8ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE (job_id = 2)[0m
+[active_model_serializers]   [1m[36mJob Load (2.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (28.13ms)
+Completed 200 OK in 38ms (Views: 23.6ms | ActiveRecord: 12.5ms)
+
+
+Started PUT "/requests/9" for 127.0.0.1 at 2017-02-22 11:24:41 +0000
+Processing by RequestsController#update as HTML
+  Parameters: {"job"=>{"id"=>2, "title"=>"Farmer", "description"=>"Need a farmer", "location"=>"Underground", "postcode"=>"SW18 3RR", "time"=>"2000-01-01T08:00:00.000Z", "date"=>nil, "owner_id"=>4, "created_at"=>"2017-02-22T01:24:40.282Z", "updated_at"=>"2017-02-22T01:24:40.282Z", "tasker_id"=>nil, "applicant_id"=>nil}, "user"=>{"id"=>6, "email"=>"george@george.com", "password_digest"=>"[FILTERED]", "created_at"=>"2017-02-22T11:24:26.559Z", "updated_at"=>"2017-02-22T11:24:26.559Z", "first_name"=>"George", "last_name"=>"Riddick", "mobile"=>nil, "postcode"=>"SW3 6NR", "image"=>"http://fillmurray.com/302/302", "address"=>"Henderson", "dob"=>"1991-01-13"}, "message"=>"I would love to do this!", "id"=>"9", "status"=>"pending", "request"=>{"id"=>"9", "message"=>"I would love to do this!", "status"=>"pending"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mRequest Load (0.6ms)[0m  [1m[34mSELECT  "requests".* FROM "requests" WHERE "requests"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/requests_controller.rb:56)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRequest Load (0.4ms)[0m  [1m[34mSELECT "requests".* FROM "requests" WHERE "requests"."job_id" = $1[0m  [["job_id", 2]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "requests" SET "status" = $1, "updated_at" = $2 WHERE "requests"."id" = $3[0m  [["status", 0], ["updated_at", 2017-02-22 11:24:41 UTC], ["id", 8]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "requests" SET "status" = $1, "updated_at" = $2 WHERE "requests"."id" = $3[0m  [["status", 0], ["updated_at", 2017-02-22 11:24:41 UTC], ["id", 9]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (66.1ms)[0m  [1m[33mUPDATE "jobs" SET "tasker_id" = $1, "updated_at" = $2 WHERE "jobs"."id" = $3[0m  [["tasker_id", 6], ["updated_at", 2017-02-22 11:24:41 UTC], ["id", 2]]
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "requests" SET "status" = $1, "updated_at" = $2 WHERE "requests"."id" = $3[0m  [["status", 2], ["updated_at", 2017-02-22 11:24:41 UTC], ["id", 9]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered RequestSerializer with ActiveModelSerializers::Adapter::Attributes (2.38ms)
+Completed 200 OK in 112ms (Views: 3.2ms | ActiveRecord: 73.8ms)
+
+
+Started PUT "/requests/8" for 127.0.0.1 at 2017-02-22 11:24:49 +0000
+Processing by RequestsController#update as HTML
+  Parameters: {"job"=>{"id"=>2, "title"=>"Farmer", "description"=>"Need a farmer", "location"=>"Underground", "postcode"=>"SW18 3RR", "time"=>"2000-01-01T08:00:00.000Z", "date"=>nil, "owner_id"=>4, "created_at"=>"2017-02-22T01:24:40.282Z", "updated_at"=>"2017-02-22T01:24:40.282Z", "tasker_id"=>nil, "applicant_id"=>nil}, "user"=>{"id"=>5, "email"=>"jeb@jeb.com", "password_digest"=>"[FILTERED]", "created_at"=>"2017-02-22T10:46:06.904Z", "updated_at"=>"2017-02-22T10:46:06.904Z", "first_name"=>"Jeb", "last_name"=>"Jeb", "mobile"=>nil, "postcode"=>"SW19 3RR", "image"=>"http://fillmurray.com/303/303", "address"=>"Henderson Road", "dob"=>"1991-01-13"}, "message"=>"I would love to do this!", "id"=>"8", "status"=>"accepted", "request"=>{"id"=>"8", "message"=>"I would love to do this!", "status"=>"accepted"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mRequest Load (0.8ms)[0m  [1m[34mSELECT  "requests".* FROM "requests" WHERE "requests"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/Tom/development/WDI_Project_4-api/app/controllers/requests_controller.rb:56)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJob Load (1.9ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "requests" SET "status" = $1, "updated_at" = $2 WHERE "requests"."id" = $3[0m  [["status", 2], ["updated_at", 2017-02-22 11:24:49 UTC], ["id", 8]]
+  [1m[35m (17.0ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered RequestSerializer with ActiveModelSerializers::Adapter::Attributes (1.79ms)
+Completed 200 OK in 46ms (Views: 2.5ms | ActiveRecord: 22.8ms)
+
+
+Started GET "/jobs/myjobs" for 127.0.0.1 at 2017-02-22 11:24:59 +0000
+Processing by JobsController#myJobs as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE (owner_id = 6)[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/jobs/booked" for 127.0.0.1 at 2017-02-22 11:25:00 +0000
+Processing by JobsController#booked as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mJob Load (2.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE (tasker_id = 6)[0m
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.58ms)
+Completed 200 OK in 14ms (Views: 5.5ms | ActiveRecord: 5.1ms)
+
+
