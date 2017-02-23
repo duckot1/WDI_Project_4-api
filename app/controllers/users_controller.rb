@@ -33,6 +33,10 @@ class UsersController < ApplicationController
 
   # DELETE /users/1
   def destroy
+    @jobs = Job.where({ owner_id: @current_user.id })
+    @jobs.destroy_all
+    @requests = Request.where({ user_id: @current_user.id })
+    @requests.destroy_all
     @user.destroy
   end
 

@@ -14,6 +14,7 @@ class Request < ApplicationRecord
         request.save
       end
       job.tasker_id = self.user_id
+      job.status = 1
       job.save
       self.status = 2
       p job

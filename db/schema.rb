@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170221233210) do
+ActiveRecord::Schema.define(version: 20170223132246) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,13 +20,15 @@ ActiveRecord::Schema.define(version: 20170221233210) do
     t.text     "description"
     t.string   "location"
     t.string   "postcode"
-    t.time     "time"
-    t.date     "date"
     t.integer  "owner_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.integer  "tasker_id"
     t.integer  "applicant_id"
+    t.integer  "status",       default: 0
+    t.datetime "datetime"
+    t.string   "day"
+    t.string   "image"
   end
 
   create_table "requests", force: :cascade do |t|
@@ -38,6 +40,17 @@ ActiveRecord::Schema.define(version: 20170221233210) do
     t.integer  "status"
     t.index ["job_id"], name: "index_requests_on_job_id", using: :btree
     t.index ["user_id"], name: "index_requests_on_user_id", using: :btree
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string   "message"
+    t.integer  "user_id"
+    t.integer  "job_id"
+    t.float    "rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["job_id"], name: "index_reviews_on_job_id", using: :btree
+    t.index ["user_id"], name: "index_reviews_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -52,8 +65,11 @@ ActiveRecord::Schema.define(version: 20170221233210) do
     t.string   "image"
     t.string   "address"
     t.date     "dob"
+    t.float    "rating"
   end
 
   add_foreign_key "requests", "jobs"
   add_foreign_key "requests", "users"
+  add_foreign_key "reviews", "jobs"
+  add_foreign_key "reviews", "users"
 end

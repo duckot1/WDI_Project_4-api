@@ -8,26 +8,26 @@ class JobsController < ApplicationController
     @requests.each do |request|
       job_ids << request.job_id
     end
-    @jobs = Job.where.not({ id: job_ids, owner_id: @current_user.id })
+    @jobs = Job.where.not({ id: job_ids, owner_id: @current_user.id, status: ["filled", "finished"] })
+    p @jobs
 
     render json: @jobs
   end
 
   def applied
     @request = Request.where("user_id = #{@current_user.id}")
-    p @request
-    @jobs = Job.where("id = #{@request.first.job_id}")
+    @jobs = Job.where({ id: @request.first.job_id}, status: "open")
 
     render json: @jobs
   end
 
   def myJobs
-    @jobs = Job.where("owner_id = #{@current_user.id}")
+    @jobs = Job.where({ owner_id: @current_user.id, status: ["open", "filled"] })
     render json: @jobs
   end
 
   def booked
-    @jobs = Job.where("tasker_id = #{@current_user.id}")
+    @jobs = Job.where({ tasker_id: @current_user.id, status: "filled" })
     p @jobs
     render json: @jobs
   end
@@ -72,7 +72,7 @@ class JobsController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def job_params
       hash = {}
-      hash.merge! params.slice(:title, :description, :location, :postcode, :time)
+      hash.merge! params.slice(:title, :description, :location, :postcode, :datetime, :status, :image)
       hash
     end
 end
