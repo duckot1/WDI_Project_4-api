@@ -78,8 +78,11 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+# production:
+#   <<: *default
+#   database: wdi-project-4-api_production
+#   username: wdi-project-4-api
+#   password: <%= ENV['WDI-PROJECT-4-API_DATABASE_PASSWORD'] %>
+
 production:
-  <<: *default
-  database: wdi-project-4-api_production
-  username: wdi-project-4-api
-  password: <%= ENV['WDI-PROJECT-4-API_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
