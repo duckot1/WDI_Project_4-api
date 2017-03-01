@@ -14,7 +14,7 @@ class Job < ApplicationRecord
   validate  :datetime_validation
 
   def datetime_validation
-    if datetime.present? && datetime < DateTime.now && self.record_new?
+    if datetime.present? && datetime < DateTime.now && self.new_record?
       errors.add(:time, "That is in the past")
     end
   end

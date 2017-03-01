@@ -72,7 +72,7 @@ class JobsController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def job_params
       hash = {}
-      hash.merge! params.slice(:title, :description, :location, :postcode, :datetime, :status, :image)
+      hash.merge! params.slice(:title, :description, :location, :postcode, :datetime, :status, :image, :rate)
       hash
     end
 end
